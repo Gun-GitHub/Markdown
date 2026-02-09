@@ -35,7 +35,7 @@
 
 ### 2. H200 的配置
 
-![截图](97b4f5aff1ad5084f4d42b868b2534d9.png)
+![截图](./images_英伟达gpu共享拆分/97b4f5aff1ad5084f4d42b868b2534d9.png)
 
 ### 3. H200 141GB 产品上支持的拆分方案
 
@@ -212,7 +212,7 @@ $ sudo nvidia-smi -i 0 -mig 0
 I > GI > CI
 ```
 
-<img src="bb2a3dd716268aaaebcfb5098ce4ddf4.png" alt="截图" style="zoom:50%;" />
+<img src="./images_英伟达gpu共享拆分/bb2a3dd716268aaaebcfb5098ce4ddf4.png" alt="截图" style="zoom:50%;" />
 
 |层级|角色|是否可独立存在|创建顺序限制|
 |--|--|--|--|
@@ -265,6 +265,6 @@ limit:
 
 ### 4. 效果
 
-![截图](42d8b4a683a8734269f6fe5e8fd0c6b2.png)
+![截图](./images_英伟达gpu共享拆分/42d8b4a683a8734269f6fe5e8fd0c6b2.png)
 
 [参考文档](https://github.com/Project-HAMi/HAMi/blob/master/README_cn.md)
