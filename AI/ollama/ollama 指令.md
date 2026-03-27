@@ -286,8 +286,8 @@ oras push 192.168.100.160:8085/ollama-models/qwen3:8b \
 
 ### 下拉
 
+```sh
+# 下拉前先要创建目录
+mkdir -p ~/.ollama/models/manifests/registry.ollama.ai/library/qwen3/
+oras pull --plain-http 192.168.100.160:8085/ollama-models/qwen3:8b 
 ```
-oras pull --plain-http 192.168.100.160:8085/ollama-models/qwen3:8b
-```
-
-## 

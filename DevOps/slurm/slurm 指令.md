@@ -208,13 +208,13 @@ SLURM_JWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDkxNzYxNzksImlhdCI6M
 
 查看节点状态信息
 
-```sh
-scontrol show nodes gp1
+```shell
+scontrol show nodes gpu1
 ```
 
 更新节点状态
 
-```sh
+```shell
 scontrol update NodeName=node01 State=DRAIN
 ```
 
@@ -260,11 +260,25 @@ ssacctmgr add user name=<用户组名> account=<用户组名> partition=<partiti
 sacctmgr add user name=root account=root partition=gpu
 ```
 
+查看 slurm 的集群配置
+
+```shell
+scontrol show config  # 显示所有 Slurm 配置
+scontrol show partition <分区名>  # 查看特定分区配置
+scontrol show node <节点名>  # 查看特定节点配置
+```
+
+
+
 ## 12. sinfo
 
 使用 sinfo 查看节点 gres 资源
 
 ```sh
+sinfo -N -o "%N %P %c %m %G %T"  # 节点、分区、CPU数、内存、GPU、状态
+sinfo -e  # 详细节点信息
+
+
 (base) [root@mn1 ~]# sinfo -o "%20P %5c %10m %15f %10G %25l %N"
 PARTITION            CPUS  MEMORY     AVAIL_FEATURES  GRES       TIMELIMIT                 NODELIST
 normal               6+    15800+     (null)          gpu:GTX106 infinite                  cn[1-2]
