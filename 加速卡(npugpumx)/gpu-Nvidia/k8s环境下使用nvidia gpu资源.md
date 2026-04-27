@@ -1,3 +1,4 @@
+[[nvidia]]
 # k8s环境下使用nvidia gpu资源
 
 ```sh

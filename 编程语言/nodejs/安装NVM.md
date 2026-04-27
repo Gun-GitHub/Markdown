@@ -1,3 +1,4 @@
+[[nodejs]]
 ## 下载 NVM
 
 ```shell

@@ -1,0 +1,17 @@
+{
+  "strictLineBreaks": false,
+  "showLineNumber": true,
+  "rightToLeft": false,
+  "readableLineLength": false,
+  "propertiesInDocument": "hidden",
+  "defaultViewMode": "preview",
+  "newFileLocation": "current",
+  "attachmentFolderPath": "./附件",
+  "newLinkFormat": "relative",
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true,
+  "showIndentGuide": true,
+  "showInlineTitle": true,
+  "autoConvertHtml": false,
+  "promptDelete": false
+}

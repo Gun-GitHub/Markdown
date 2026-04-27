@@ -1,3 +1,4 @@
+[[openclaw]]
 ## 安装 openclaw-tavily-search
 
 ```bash

@@ -1,3 +1,4 @@
+[[ollama]]
 # 大语言模型 & RAG
 
 ## 资源
@@ -291,3 +292,82 @@ oras push 192.168.100.160:8085/ollama-models/qwen3:8b \
 mkdir -p ~/.ollama/models/manifests/registry.ollama.ai/library/qwen3/
 oras pull --plain-http 192.168.100.160:8085/ollama-models/qwen3:8b 
 ```
+
+### 整理成的脚本
+
+```bash
+#!/usr/bin/env bash
+
+set -e
+
+MODEL_NAME="$1"   # 比如 qwen3.5:27b
+REGISTRY="$2"     # 比如 192.168.100.160:8085/ollama-models
+USERNAME="$3"
+PASSWORD="$4"
+
+if [ -z "$MODEL_NAME" ] || [ -z "$REGISTRY" ]; then
+  echo "Usage: $0 <model_name> <registry> [username] [password]"
+  echo "Example:"
+  echo "  $0 qwen3.5:27b 192.168.100.160:8085/ollama-models admin pass"
+  exit 1
+fi
+
+MANIFEST_PATH="$HOME/.ollama/models/manifests/registry.ollama.ai/library/${MODEL_NAME/:/\/}"
+
+if [ ! -f "$MANIFEST_PATH" ]; then
+  echo "❌ Manifest not found: $MANIFEST_PATH"
+  exit 1
+fi
+
+echo "📦 Using manifest: $MANIFEST_PATH"
+
+CONFIG_DIGEST=$(jq -r '.config.digest' "$MANIFEST_PATH" | sed 's/sha256:/sha256-/')
+LAYERS=$(jq -r '.layers[] | "\(.mediaType) \(.digest)"' "$MANIFEST_PATH")
+
+CMD="oras push ${REGISTRY}/${MODEL_NAME} \\
+  --image-spec v1.0 \\
+  --plain-http \\"
+
+if [ -n "$USERNAME" ]; then
+  CMD+="
+  --username ${USERNAME} \\"
+fi
+
+if [ -n "$PASSWORD" ]; then
+  CMD+="
+  --password ${PASSWORD} \\"
+fi
+
+# config（必须两次）
+CMD+="
+  --config blobs/${CONFIG_DIGEST}:application/vnd.docker.container.image.v1+json \\
+  blobs/${CONFIG_DIGEST}:application/vnd.docker.container.image.v1+json \\"
+
+# layers
+while read -r line; do
+  MEDIA_TYPE=$(echo "$line" | awk '{print $1}')
+  DIGEST=$(echo "$line" | awk '{print $2}' | sed 's/sha256:/sha256-/')
+
+  CMD+="
+  blobs/${DIGEST}:${MEDIA_TYPE} \\"
+done <<< "$LAYERS"
+
+# manifests（关键）
+CMD+="
+  manifests/registry.ollama.ai/library/${MODEL_NAME/:/\/}:application/vnd.ollama.image.manifests"
+
+echo
+echo "✅ Generated ORAS command:"
+echo "----------------------------------------"
+echo "$CMD"
+echo "----------------------------------------"
+```
+
+### 使用方式
+
+```bash
+chmod +x gen_oras_push.sh
+
+./gen_oras_push.sh qwen3.5:27b 192.168.100.160:8085/ollama-models admin '!@#$1qazasdf'
+```
+

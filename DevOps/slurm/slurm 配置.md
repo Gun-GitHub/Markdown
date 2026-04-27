@@ -1,3 +1,4 @@
+[[slurm]]
 # [主要参考](https://docs.slurm.cn/master/man-pages-shou-ce)
 
 # Configuration Files
@@ -17,6 +18,28 @@
 |11|slurm.conf|Slurm configuration file.  <br/>Slurm 配置文件。|
 |12|slurmdbd.conf|Slurm Database Daemon (SlurmDBD) configuration file.  <br/>Slurm 数据库守护进程(slurmDBD)配置文件。|
 |13|topology.conf|Slurm configuration file for defining the network topology.  <br/>定义 slurm 网络拓扑的配置文件。|
+
+##   3.cgroup.conf
+
+设备隔离配置
+
+```yaml
+ConstrainDevices=yes
+```
+
+如果是：
+
+```
+ConstrainDevices=no   # 或没配置
+```
+
+就会出现
+
+```bash
+srun -p x86-gpu -N 1 -n 1 -c 10 --mem=50G --time=01:00:00 --gres=gpu:L20:2 --gpus=2 --pty bash 
+```
+
+执行 nvidia-smi 后还是 8张卡的问题
 
 ## 11.slurm.conf
 
@@ -67,3 +90,4 @@ https://slurm.schedmd.com/slurm.conf.html#OPT_bf_.busy_nodes
 ![982ab1446549419cea1f616f212dfdb.png](c03f1f3c73f201d18b37fceb74e4251f.png)
 
 来源于 chart_gpt,官方文档里没有这个选项,看着不靠谱
+

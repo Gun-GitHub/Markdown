@@ -1,3 +1,4 @@
+[[slurm]]
 # slurmdbd
 
 ```sh

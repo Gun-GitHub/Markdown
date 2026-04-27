@@ -1,3 +1,4 @@
+[[slurm]]
 首先是 slurm.conf 需要做如下配置:
 
 ```sh

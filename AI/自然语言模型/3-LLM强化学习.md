@@ -1,3 +1,4 @@
+[[自然语言模型]]
 强化学习推荐图书项目:[项目名为:easy-lr, 书籍名为:蘑菇书](https://github.com/datawhalechina/easy-rl/tree/master)
 
 ## 一、什么是强化学习（Reinforcement Learning, RL）

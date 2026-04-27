@@ -1,3 +1,4 @@
+[[linux]]
 来源:
 
   [一篇文章带你彻底弄懂Linux中的信号](https://blog.csdn.net/m0_61227789/article/details/134053946)
@@ -20,7 +21,7 @@ Linux系统定义了64种信号，分为两类：可靠信号与不可靠信号�
 
 在终端，可通过kill -l查看所有的signal信号。
 
-![截图](b31efe9e89c2079c952bbb1250686ced.png)
+![截图](images_linux中的信号/b31efe9e89c2079c952bbb1250686ced.png)
 
 |取值|名称|解释|默认动作|
 |--|--|--|--|

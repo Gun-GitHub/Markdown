@@ -1,3 +1,4 @@
+[[nvidia]]
 CUDA
 
   ## 安装

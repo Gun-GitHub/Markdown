@@ -1,0 +1,261 @@
+{
+  "main": {
+    "id": "037ebc48b8d3f9b3",
+    "type": "split",
+    "children": [
+      {
+        "id": "bce7e37eca902935",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cb93b58dffc1d18e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "操作系统/linux/linux 中的信号.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "linux 中的信号"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "995521774cf5342b",
+    "type": "split",
+    "children": [
+      {
+        "id": "d69e997389d01e95",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "de888816c19d9f9c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "be259333ad05f856",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "e8567d8ee20ab619",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 309.5
+  },
+  "right": {
+    "id": "21775d249be8f59e",
+    "type": "split",
+    "children": [
+      {
+        "id": "83fe38b94d010929",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0e850b2c1620b79b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "编程语言/语言框架并发排行（Web Framework Benchmarks）.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "语言框架并发排行（Web Framework Benchmarks） 的反向链接列表"
+            }
+          },
+          {
+            "id": "67d1c106d4c80aaa",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "AI/传统机器学习算法/07_Kmean/无标题.png",
+                "linksCollapsed": true,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-going-out",
+              "title": "无标题 的出链列表"
+            }
+          },
+          {
+            "id": "65ae94e820db000b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "d29985400613e80a",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "bd48b32a48c4c354",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "编程语言/语言框架并发排行（Web Framework Benchmarks）.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "语言框架并发排行（Web Framework Benchmarks） 的大纲"
+            }
+          },
+          {
+            "id": "c0223e03123f131c",
+            "type": "leaf",
+            "state": {
+              "type": "footnotes",
+              "state": {
+                "file": "操作系统/linux/容器非root 用户给予安装库的权限.md"
+              },
+              "icon": "lucide-file-signature",
+              "title": "脚注"
+            }
+          },
+          {
+            "id": "b8bb0819893b620f",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
+            }
+          }
+        ],
+        "currentTab": 6
+      }
+    ],
+    "direction": "horizontal",
+    "width": 414.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "graph:查看关系图谱": false,
+      "switcher:打开快速切换": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false,
+      "workspaces:管理工作区布局": false,
+      "audio-recorder:开始/结束录音": false,
+      "random-note:开始漫游笔记": false,
+      "zk-prefixer:创建时间戳笔记": false
+    }
+  },
+  "active": "cb93b58dffc1d18e",
+  "lastOpenFiles": [
+    "加速卡(npugpumx)/加速卡.md",
+    "加速卡(npugpumx)/清微电子GPU/清微电子GPU技术调研报告.md",
+    "加速卡(npugpumx)/npu-Ascend/ascend310 推理卡测试.md",
+    "加速卡(npugpumx)/gpu-Nvidia/英伟达gpu共享拆分.md",
+    "加速卡(npugpumx)/gpu-Nvidia/gpu相关.md",
+    "加速卡(npugpumx)/gpu-Nvidia/k8s环境下使用nvidia gpu资源.md",
+    "分布式文件存储系统/nfs+xfs_quota.md",
+    "分布式文件存储系统/juicfs 小文件缓存较慢,编译较慢,提速的方法.md",
+    "分布式文件存储系统/常用的分布式文件存储系统.md",
+    "操作系统/linux/linux 中的信号.md",
+    "操作系统/windows/附件/Pasted image 20260427151448.png",
+    "操作系统/linux/images_linux中的信号",
+    "操作系统/linux/images_linux中的信号/b31efe9e89c2079c952bbb1250686ced.png",
+    "操作系统/linux/容器非root 用户给予安装库的权限.md",
+    "操作系统/操作系统.md",
+    "编程语言/c++/动态库和静态库的区别.md",
+    "编程语言/c++/操作系统内存分配.md",
+    "编程语言/c++/安装vcpkg.md",
+    "编程语言/语言框架并发排行（Web Framework Benchmarks）.md",
+    "编程语言/image_语言框架并发排行/278691653e86e5cd684720f4788ee95c.png",
+    "AI/llama-factory/dataset_info配置说明文档.md",
+    "编程语言/c++/cmake教程.md",
+    "编程语言/编程语言.md",
+    "编程语言/python/webssh.md",
+    "编程语言/python/pyinstaller 打包含义.md",
+    "编程语言/go/gvm安装教程.md",
+    "操作系统/linux/linux DNS 配置.md",
+    "操作系统/linux/sudo 执行指令的时候会覆盖用户原本的环境变量.md",
+    "操作系统/windows/rdp协议.md",
+    "DevOps/slurm/e29297f16bcb23f59a921eb7ef9a859b.jpg",
+    "DevOps/slurm/c03f1f3c73f201d18b37fceb74e4251f.png",
+    "DevOps/slurm/b7df4d111d497b5d9370c8139c55c77e.png",
+    "DevOps/slurm/a5fe8b2f37c2674a4a7f335c055b86dd.png",
+    "DevOps/slurm/951467120e5849f9474989e10f41a192.webp",
+    "DevOps/slurm/hpc 系统安装.md",
+    "操作系统/windows/58462711257c3d47ddb1ec95748b947b.png",
+    "操作系统/windows/823459278c3c29cde122771ed5d879c6.png",
+    "操作系统/windows/附件",
+    "AI/传统机器学习算法/01_DicitionTree/2.pdf",
+    "编程语言/c++/image_cmake教程",
+    "编程语言/c++/image_安装vcpakage",
+    "编程语言/c++/image_installl_vcpakage",
+    "files",
+    "home/zhoujun/文档/code/Markdown/funsine工作",
+    "home/zhoujun/文档/code/Markdown",
+    "home/zhoujun/文档/code"
+  ]
+}

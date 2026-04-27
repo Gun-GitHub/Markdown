@@ -1,3 +1,4 @@
+[[linux]]
 # Ubuntu 18.04 出现GLIBC_2.28 not found的解决方法(亲测有效)
 
 https://blog.csdn.net/Youning_Yim/article/details/129343107

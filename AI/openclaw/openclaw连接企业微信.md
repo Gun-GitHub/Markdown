@@ -1,3 +1,4 @@
+[[openclaw]]
 ==原链接==: https://open.work.weixin.qq.com/help2/pc/cat?doc_id=21657
 
 ![img](https://wwcdn.weixin.qq.com/node/wework/images/helpcenter_wecomlogo_zh_2x.0d97f2a95e.png)

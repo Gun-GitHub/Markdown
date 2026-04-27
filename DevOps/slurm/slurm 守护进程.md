@@ -1,3 +1,5 @@
+[[slurm]]
+
 # [主要参考](https://docs.slurm.cn/master/man-pages-shou-ce)
 
 ### 架构图

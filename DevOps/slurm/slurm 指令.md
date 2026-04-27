@@ -1,3 +1,4 @@
+[[slurm]]
 # [**主要参考**](https://docs.slurm.cn/master/man-pages-shou-ce)
 
 # slurm 用户命令包括:
@@ -71,62 +72,19 @@ feng0feng+ feng0feng+  Operator     fs_dev feng0feng+     normal         1      
    feng666    feng666  Operator     fs_dev    feng666     normal         1                                                                                     feng666   feng666 
        fzk        fzk  Operator     fs_dev        fzk     normal         1                                                                                         fzk       fzk 
       fzk1       fzk1  Operator     fs_dev       fzk1                    1                                                                        high,low,normal,qos+      fzk1 
-      fzk1       fzk1  Operator     fs_dev       fzk1     normal         1                                                                                        fzk1      fzk1 
-     fzk10      fzk10  Operator     fs_dev      fzk10                    1                                                                                      normal    normal 
-     fzk10      fzk10  Operator     fs_dev      fzk10     normal         1                                                                                      normal    normal 
-   fzk1000    fzk1000  Operator     fs_dev    fzk1000     normal         1                                                                                     fzk1000   fzk1000 
-     fzk11      fzk11  Operator     fs_dev      fzk11                    1                                                                                       fzk11     fzk11 
-     fzk11      fzk11  Operator     fs_dev      fzk11 normal_ma+         1                                                                                       fzk11     fzk11 
-     fzk11      fzk11  Operator     fs_dev      fzk11     normal         1                                                                                       fzk11     fzk11 
-     fzk13      fzk13  Operator     fs_dev      fzk13     normal         1                                                                                       fzk13     fzk13 
-      fzk2       fzk2  Operator     fs_dev       fzk2     normal         1                                                                                        fzk2      fzk2 
-      fzk3       fzk3  Operator     fs_dev       fzk3     normal         1                                                                                        fzk3      fzk3 
-      fzk3       fzk3  Operator     fs_dev       fzk3                    1                                                                                        fzk3      fzk3 
-     fzk30      fzk30  Operator     fs_dev      fzk30                    1                                                                                       fzk30     fzk30 
-     fzk30      fzk30  Operator     fs_dev      fzk30     normal         1                                                                                       fzk30     fzk30 
-     fzk31      fzk31  Operator     fs_dev      fzk31                    1                                                                                       fzk31     fzk31 
-     fzk31      fzk31  Operator     fs_dev      fzk31     normal         1                                                                                       fzk31     fzk31 
-     fzk33      fzk33  Operator     fs_dev      fzk33     normal         1                                                                                       fzk33     fzk33 
-      fzk4       fzk4  Operator     fs_dev       fzk4     normal         1                                                                                        fzk4      fzk4 
-      fzk5       fzk5  Operator     fs_dev       fzk5                    1                                                                                        fzk5      fzk5 
-      fzk5       fzk5  Operator     fs_dev       fzk5     normal         1                                                                                        fzk5      fzk5 
-      fzk7       fzk7  Operator     fs_dev       fzk7     normal         1                                                                                        fzk7      fzk7 
-      fzk7       fzk7  Operator     fs_dev       fzk7                    1                                                                                        fzk7      fzk7 
-      fzk8       fzk8  Operator     fs_dev       fzk8                    1                                                                                        fzk8      fzk8 
-      fzk8       fzk8  Operator     fs_dev       fzk8     normal         1                                                                                        fzk8      fzk8 
-      fzk9       fzk9  Operator     fs_dev       fzk9     normal         1                                                                                        fzk9      fzk9 
-     guest      guest  Operator     fs_dev      guest     normal         1                                                                                       guest     guest 
-        jh         jh  Operator     fs_dev         jh     normal         1                                                                                          jh        jh 
-      jhhh       jhhh  Operator     fs_dev       jhhh     normal         1                                                                                        jhhh      jhhh 
-      ljj0       ljj0  Operator     fs_dev       ljj0                    1                                                                                        ljj0      ljj0 
-      ljj0       ljj0  Operator     fs_dev       ljj0     normal         1                                                                                        ljj0      ljj0 
-     ljj01      ljj01  Operator     fs_dev      ljj01     normal         1                                                                                       ljj01     ljj01 
-     ljj02      ljj02  Operator     fs_dev      ljj02                    1                                                                                       ljj02     ljj02 
-     ljj02      ljj02  Operator     fs_dev      ljj02     normal         1                                                                                       ljj02     ljj02 
-      ljj3       ljj3  Operator     fs_dev       ljj3     normal         1                                                                                        ljj3      ljj3 
-     mario      mario  Operator     fs_dev      mario                    1                                                                                      normal           
-     mario      mario  Operator     fs_dev      mario     normal         1                                                                                       mario     mario 
-   qostest    qostest  Operator     fs_dev    qostest     normal         1                                                                                     qostest   qostest 
-      root       root Administ+     fs_dev       root                    1                                                                                      normal           
-      ttsr       ttsr  Operator     fs_dev       ttsr                    1                                                                                                       
-wangquanb+ wangquanb+  Operator     fs_dev wangquanb+                    1                                                                                 wangquanbao wangquan+ 
-wangquanb+ wangquanb+  Operator     fs_dev wangquanb+     normal         1                                                                                 wangquanbao wangquan+ 
-       wjx        wjx  Operator     fs_dev        wjx normal_ma+         1                                                                                         wjx       wjx 
-       wjx        wjx  Operator     fs_dev        wjx                    1                                                                                      normal       wjx 
-       wjx        wjx  Operator     fs_dev        wjx     normal         1                                                                                         wjx       wjx 
-    yy2023     yy2023  Operator     fs_dev     yy2023                    1                                                                        high,low,normal,qos+    normal 
-    yy2023     yy2023  Operator     fs_dev     yy2023     normal         1                                                                        high,low,normal,qos+    normal 
-    yytest     yytest  Operator     fs_dev     yytest                    1                                                                                      yytest    yytest 
-    yytest     yytest  Operator     fs_dev     yytest     normal         1                                                                                      yytest    yytest 
-       zck        zck  Operator     fs_dev        zck                    1                                                                                         zck       zck 
-       zck        zck  Operator     fs_dev        zck     normal         1                                                                                         zck       zck 
-   zhoujun    zhoujun  Operator     fs_dev    zhoujun     normal         1                                                                                     zhoujun   zhoujun 
-        zj         zj  Operator     fs_dev         zj                    1                                                                                  low,normal        zj 
-        zj         zj  Operator     fs_dev         zj     normal         1                                                                                          zj        zj 
-zj20231227 zj20231227  Operator     fs_dev zj20231227     normal         1                                                                                      normal    normal 
-zj20240104 zj20240104  Operator     fs_dev zj20240104     normal         1                                                                                  zj20240104 zj202401+ 
-zj20240125 zj20240125  Operator     fs_dev zj20240125     normal         1                                                                                  zj20240125 zj202401+ 
+
 ```
+
+查询QOS详细信息
+
+```
+feng1@ln1:~ # sacctmgr show qos ziyuanjianding format=Name%50,GrpTRES%50
+								Name 														GrpTRES
+------------------------------------ --------------------------------------------------------------
+				      ziyuanjianding                                               cpu=100,mem=500G
+```
+
+
 
 ## 3.salloc
 

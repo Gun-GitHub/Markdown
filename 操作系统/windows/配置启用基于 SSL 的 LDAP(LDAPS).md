@@ -1,3 +1,4 @@
+[[windows]]
 # ldap 修改 windows AD 域密码必须开启 ssl 即 LDAPS
 
 # 配置启用基于 SSL 的 LDAP(LDAPS)
@@ -8,7 +9,7 @@
 
 安装Active Directory证书服务
 
-![截图](1c02665d1056843c0c58b3248280129b.png)
+![截图|136](./1c02665d1056843c0c58b3248280129b.png)
 
 勾选第一个证书颁发机构
 

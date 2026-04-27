@@ -1,3 +1,4 @@
+[[linux]]
 修改文件 /etc/xrdp/startwm.sh：
 
 ```sh

@@ -1,3 +1,4 @@
+[[python]]
 ## 一个标准的 app.spec pyinstaller 打包文件
 
 ```space

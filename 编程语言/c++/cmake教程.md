@@ -1,12 +1,13 @@
+[[c++]]
 # 安装 CMake
 
 ### windows 安装 cmake
 
 从 CMake [官网](https://cmake.org/download/) 下载并安装 CMake。
 
-![截图](./iamge_cmake教程/bf56b7839086195c318419ce53965bf8.png)
+![截图](./image_cmake教程/bf56b7839086195c318419ce53965bf8.png)
 
-![截图](./iamge_cmake教程/faa5dd887f8aec41f94f45d9b2f37dc1.png)
+![截图](./image_cmake教程/faa5dd887f8aec41f94f45d9b2f37dc1.png)
 
 确保将 CMake 添加到系统环境变量中，以便在命令行中使用。
 

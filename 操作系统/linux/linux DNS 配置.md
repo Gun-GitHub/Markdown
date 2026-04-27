@@ -1,3 +1,4 @@
+[[linux]]
 在 Linux 系统中，`/etc/resolv.conf` 文件用于配置系统的 DNS（域名系统）解析器。这个文件包含了一系列指令，用于指定 DNS 服务器、搜索域以及解析器的行为。以下是对 `/etc/resolv.conf` 文件中所有常见字段的详细解释：
 
 ## 1. nameserver

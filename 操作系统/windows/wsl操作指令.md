@@ -1,3 +1,4 @@
+[[windows]]
 # 设置 WSL2 为默认版本
 
 ```powershell

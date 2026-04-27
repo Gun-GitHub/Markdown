@@ -1,3 +1,4 @@
+[[linux]]
 ```sh
 ifconfig
 lo  Link encap:Local Loopback

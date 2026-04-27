@@ -1,3 +1,5 @@
+[[openclaw]]
+[[../../编程语言/nodejs/安装NVM|安装NVM]]
 ## 使用 NVM 创建环境
 
 ```shell
