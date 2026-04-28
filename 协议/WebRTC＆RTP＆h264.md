@@ -1,4 +1,145 @@
+[[协议]]
 # WebRTC
+
+## 概述
+
+WebRTC（Web Real-Time Communication）是 **W3C API + IETF 协议** 的集合体，使浏览器/应用之间无需插件即可实现点对点（P2P）实时音视频通信和数据传输。
+
+**协议栈层次：**
+```
+┌────────────────────────────────────────────────────┐
+│     WebRTC API (JavaScript)                        │
+│  getUserMedia | RTCPeerConnection | RTCDataChannel │
+├────────────────────────────────────────────────────┤
+│     SDP 协商 (Session Description)                  │
+├────────────────────────────────────────────────────┤
+│  ICE | STUN | TURN (NAT 穿透/连接建立)               │
+├────────────────────────────────────────────────────┤
+│  DTLS (密钥交换/加密)                                │
+├────────────────────────────────────────────────────┤
+│  SRTP (媒体加密传输) | SCTP (数据通道)                │
+├────────────────────────────────────────────────────┤
+│  UDP (传输层)                                       │
+└────────────────────────────────────────────────────┘
+```
+
+---
+
+### 核心 API
+
+| API | 作用 |
+|-----|------|
+| `getUserMedia()` | 获取摄像头/麦克风等媒体流 |
+| `RTCPeerConnection` | 管理与对等端的连接、编码协商、媒体传输 |
+| `RTCDataChannel` | 在 P2P 通道上传输任意数据（非媒体） |
+
+---
+
+### 信令（Signaling）
+
+WebRTC 本身**不规定**信令协议，由应用层自定义实现（常用 WebSocket / SIP / XMPP）。信令负责交换两类元数据：
+
+1. **SDP（Session Description Protocol）** — 描述双方的媒体能力（编解码器、分辨率、传输地址等）
+2. **ICE Candidate** — 网络连接候选地址（IP + 端口）
+
+**典型流程（Offer/Answer 模型）：**
+```
+Peer A                     Signaling Server                     Peer B
+   │                              │                               │
+   │── createOffer() ──────────►  │                               │
+   │── setLocalDescription(offer) │                               │
+   │                              │── 转发 offer ───────────────►  │
+   │                              │                               │── setRemoteDescription(offer)
+   │                              │                               │── createAnswer()
+   │                              │◄── 转发 answer ─────────────   │── setLocalDescription(answer)
+   │◄── setRemoteDescription(ans) │                               │
+   │                              │                               │
+   │──── 交换 ICE candidates ────► │◄──── 交换 ICE candidates ──── │
+   │                              │                               │
+```
+
+**SDP 示例片段：**
+```
+v=0
+o=- 827784982034516459 2 IN IP4 127.0.0.1
+s=-
+t=0 0
+a=group:BUNDLE 0
+a=ice-ufrag:UFJFQ+RL8H2+WFDAkSWm+AAB
+a=ice-pwd:aZZEwPXx3f0QYRVl7BOZRZ9r
+a=fingerprint:sha-256 8A:D7:B1:AE:E2:54:...
+m=video 51372 RTP/AVP 96
+a=rtpmap:96 H264/90000
+```
+
+---
+
+### ICE 连接建立
+
+ICE（Interactive Connectivity Establishment）用于在各种网络环境下找到两端之间的最佳通信路径。
+
+#### 候选者类型（ICE Candidate Types）
+
+| 类型 | 优先级 | 来源 |
+|------|--------|------|
+| **Host**（主机候选） | 126 | 直接使用本地网卡 IP |
+| **Peer Reflexive**（对端反射） | 110 | 连接检查过程中动态发现 |
+| **Server Reflexive**（反射候选） | 100 | 通过 STUN 服务器获取公网 IP |
+| **Relay**（中继候选） | 0 | 通过 TURN 服务器中转 |
+
+**优先级计算公式（RFC 8445）：**
+```
+priority = (2^24) * type_preference +
+           (2^8)  * local_preference +
+           (256 - component_id)
+```
+
+#### STUN / TURN
+
+| 服务器 | 作用 | 适用场景 |
+|--------|------|----------|
+| **STUN** | 帮助客户端发现自己的公网 IP 和端口 | NAT 穿透 |
+| **TURN** | 中继转发媒体数据 | 对称 NAT / 防火墙无法穿透时回退 |
+
+> 公共 STUN 示例：`stun:stun.l.google.com:19302`
+
+**ICE 连通性检查流程：**
+1. 双方收集各自的候选者列表
+2. 通过信令交换候选者
+3. 各自对候选者按优先级排序
+4. 按序互相发送 STUN Binding Request 进行连通性检查
+5. 选择第一个验证通过的候选者对作为连接路径
+6. 如果所有直连尝试失败，回退到 TURN 中继
+
+---
+
+### 安全与加密
+
+WebRTC 强制加密，所有数据必须经过以下两级保护：
+
+1. **DTLS（Datagram TLS）** — 在 UDP 上实现的 TLS，用于交换加密密钥
+2. **SRTP（Secure RTP）** — 使用 DTLS 协商的密钥对 RTP 媒体流进行 AES 加密
+
+> "All WebRTC components **must** be encrypted." — RFC 8827
+
+---
+
+### WebRTC ↔ RTP ↔ H.264 的关系
+
+| 层次 | 说明 |
+|------|------|
+| **WebRTC** | 建立 P2P 连接，协商媒体参数，管理会话生命周期 |
+| **RTP** | 承载实际的音频/视频数据包，提供时序、丢检测、SSRC 标识 |
+| **H.264** | 视频编码格式，NALU 结构嵌套在 RTP Payload 中传输（支持 FU-A 分片） |
+
+当 WebRTC 使用 H.264 编码时，视频数据经过以下链路：
+```
+摄像头 → H.264 编码器 → NALU 打包 → RTP 分片(FU-A) → SRTP 加密 → UDP → P2P
+```
+
+`PT = 96`（动态负载类型）通常在 SDP 中映射到 H.264，实际传输时 RTP Header 中的 Payload Type 字段即为协商后的值。
+
+---
 
 <br/>
 

@@ -1,3 +1,4 @@
+[[docker]]
 使用不同的 namespace , 可以实现容器的进程看不到别的容器资源
 
 但是容器中的进程依然可以自由的使用主机的 cpu, memory 等相关资源,如果不加以限制,有可能会导致主机资源竞争,这就要使用到 linux 内核的另一个核心技术 cgroups
@@ -266,3 +267,10 @@ memory.kmem.tcp.limit_in_bytes  memory.move_charge_at_immigrate
 注意: cgroups 虽然可以实现资源限制, 但是不能保证资源的使用
 
 例如: cgroups 虽然能够限制某个容只能使用 1核 cpu,但不能保证总能使用到 1 核 cpu, 当 cpu 资源发生竞争时,可能会导致实际使用的 cpu 资源发生竞争
+
+---
+
+### 关联笔记
+- [[学习笔记/9为什么构建容器需要 Namespace|9为什么构建容器需要 Namespace]]
+- [[学习笔记/7Docker 安全-基于内核的弱隔离系统如何保障安全性|7Docker 安全-基于内核的弱隔离系统如何保障安全性]]
+- [[学习笔记/8容器监控-容器监控原理以及 cAdvisor 的安装与使用|8容器监控-容器监控原理以及 cAdvisor 的安装与使用]]

@@ -4,21 +4,49 @@
     "type": "split",
     "children": [
       {
-        "id": "bce7e37eca902935",
+        "id": "86264e9580ad8bfb",
         "type": "tabs",
         "children": [
           {
-            "id": "cb93b58dffc1d18e",
+            "id": "e645514a7855a92a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "操作系统/linux/linux 中的信号.md",
+                "file": "DevOps/slurm/resource_hpc-install/slurmdbd.conf.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "linux 中的信号"
+              "title": "slurmdbd.conf"
+            }
+          },
+          {
+            "id": "981013b3dada431b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DevOps/slurm/resource_hpc-install/cgroup.conf.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "cgroup.conf"
+            }
+          },
+          {
+            "id": "1440f580e9c768d9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DevOps/slurm/resource_hpc-install/slurmdbd.conf.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "slurmdbd.conf"
             }
           }
         ]
@@ -78,7 +106,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 309.5
+    "width": 516.5
   },
   "right": {
     "id": "21775d249be8f59e",
@@ -170,15 +198,13 @@
             "type": "leaf",
             "state": {
               "type": "footnotes",
-              "state": {
-                "file": "操作系统/linux/容器非root 用户给予安装库的权限.md"
-              },
+              "state": {},
               "icon": "lucide-file-signature",
               "title": "脚注"
             }
           },
           {
-            "id": "b8bb0819893b620f",
+            "id": "cf0fb8883464f2c8",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -192,7 +218,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 414.5
+    "width": 698.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -209,53 +235,54 @@
       "zk-prefixer:创建时间戳笔记": false
     }
   },
-  "active": "cb93b58dffc1d18e",
+  "active": "cf0fb8883464f2c8",
   "lastOpenFiles": [
-    "加速卡(npugpumx)/加速卡.md",
-    "加速卡(npugpumx)/清微电子GPU/清微电子GPU技术调研报告.md",
-    "加速卡(npugpumx)/npu-Ascend/ascend310 推理卡测试.md",
-    "加速卡(npugpumx)/gpu-Nvidia/英伟达gpu共享拆分.md",
-    "加速卡(npugpumx)/gpu-Nvidia/gpu相关.md",
-    "加速卡(npugpumx)/gpu-Nvidia/k8s环境下使用nvidia gpu资源.md",
-    "分布式文件存储系统/nfs+xfs_quota.md",
-    "分布式文件存储系统/juicfs 小文件缓存较慢,编译较慢,提速的方法.md",
-    "分布式文件存储系统/常用的分布式文件存储系统.md",
-    "操作系统/linux/linux 中的信号.md",
-    "操作系统/windows/附件/Pasted image 20260427151448.png",
-    "操作系统/linux/images_linux中的信号",
-    "操作系统/linux/images_linux中的信号/b31efe9e89c2079c952bbb1250686ced.png",
-    "操作系统/linux/容器非root 用户给予安装库的权限.md",
-    "操作系统/操作系统.md",
-    "编程语言/c++/动态库和静态库的区别.md",
-    "编程语言/c++/操作系统内存分配.md",
-    "编程语言/c++/安装vcpkg.md",
-    "编程语言/语言框架并发排行（Web Framework Benchmarks）.md",
-    "编程语言/image_语言框架并发排行/278691653e86e5cd684720f4788ee95c.png",
-    "AI/llama-factory/dataset_info配置说明文档.md",
-    "编程语言/c++/cmake教程.md",
-    "编程语言/编程语言.md",
-    "编程语言/python/webssh.md",
-    "编程语言/python/pyinstaller 打包含义.md",
-    "编程语言/go/gvm安装教程.md",
-    "操作系统/linux/linux DNS 配置.md",
-    "操作系统/linux/sudo 执行指令的时候会覆盖用户原本的环境变量.md",
-    "操作系统/windows/rdp协议.md",
-    "DevOps/slurm/e29297f16bcb23f59a921eb7ef9a859b.jpg",
-    "DevOps/slurm/c03f1f3c73f201d18b37fceb74e4251f.png",
-    "DevOps/slurm/b7df4d111d497b5d9370c8139c55c77e.png",
-    "DevOps/slurm/a5fe8b2f37c2674a4a7f335c055b86dd.png",
-    "DevOps/slurm/951467120e5849f9474989e10f41a192.webp",
+    "DevOps/slurm/resource_hpc-install/slurmdbd.conf.md",
+    "DevOps/slurm/resource_hpc-install/slurm.conf.md",
+    "DevOps/slurm/resource_hpc-install/gres.conf.md",
+    "DevOps/slurm/resource_hpc-install/cgroup.conf.md",
     "DevOps/slurm/hpc 系统安装.md",
-    "操作系统/windows/58462711257c3d47ddb1ec95748b947b.png",
-    "操作系统/windows/823459278c3c29cde122771ed5d879c6.png",
-    "操作系统/windows/附件",
-    "AI/传统机器学习算法/01_DicitionTree/2.pdf",
-    "编程语言/c++/image_cmake教程",
-    "编程语言/c++/image_安装vcpakage",
-    "编程语言/c++/image_installl_vcpakage",
+    "DevOps/prometheus/更新rancher-monitoring-prometheus-node-exporter.md",
+    "files/cgroup.conf.md",
     "files",
-    "home/zhoujun/文档/code/Markdown/funsine工作",
-    "home/zhoujun/文档/code/Markdown",
-    "home/zhoujun/文档/code"
+    "加速卡(npugpumx)/天数智芯/RM-V100.md",
+    "DevOps/slurm/resource_hpc-install/slurm.conf",
+    "DevOps/prometheus/promethus.md",
+    "DevOps/prometheus/prometheus 配置在 k8s v1.24.9 中作为插件的配置.md",
+    "DevOps/prometheus/windows监控/windows部署exporter.md",
+    "DevOps/prometheus/windows监控/注入promethus的方案.md",
+    "DevOps/prometheus/snmp协议 & 交换机/交换机登录.md",
+    "DevOps/prometheus/snmp协议 & 交换机/部署 snmp-export.md",
+    "DevOps/prometheus/snmp协议 & 交换机/交换机监控协议 snmp 字段解析.md",
+    "DevOps/prometheus/npu显卡监控/Ascend-exporter监控.md",
+    "DevOps/prometheus/gpu显卡监控/nvidia 官方显卡监控.md",
+    "DevOps/slurm/resource_hpc-install/未命名.canvas",
+    "resource_hpc-install",
+    "resource_hpc-install/slurm.conf.md",
+    "files/slurm.conf.md",
+    "DevOps/slurm/resource_hpc-install",
+    "DevOps/openldap/ldap 开启 sudo 权限-让 ldap 用户可以拥有执行 sudo 的能力.md",
+    "图形系统/新建笔记(2024220).md",
+    "DevOps/openldap/sssd/用户更新,用户刷新.md",
+    "DevOps/openldap/sssd/开启 ldap 用户可远程登录节点的权限.md",
+    "DevOps/openldap/ldap.md",
+    "加速卡(npugpumx)/加速卡.md",
+    "加速卡(npugpumx)/沐曦",
+    "加速卡(npugpumx)/华为/ascend310 推理卡测试.md",
+    "加速卡(npugpumx)/天数智芯",
+    "AI/_old_files/反向传播/9.png",
+    "AI/_old_files/反向传播/8.png",
+    "AI/_old_files/反向传播/7.png",
+    "AI/_old_files/反向传播/6.png",
+    "AI/_old_files/反向传播/4.png",
+    "AI/_old_files/反向传播/5.png",
+    "AI/_old_files/反向传播/3.png",
+    "AI/_old_files/反向传播/2.png",
+    "AI/_old_files/反向传播/1.png",
+    "AI/_old_files/反向传播",
+    "AI/_old_files/04_NN/6.1_神经网络算法Nerual_Networks上/6.1 神经网络算法(Nerual Networks)（上）_files/cross_validation.jpg",
+    "AI/_old_files/04_NN/6.3_神经网络算法Nerual_Networks应用下/6.3 神经网络算法(Nerual Networks)应用(下）.html",
+    "AI/_old_files/04_NN/6.2_神经网络算法Nerual_Networks应用上/6.2 神经网络算法(Nerual Networks)应用(上）.html",
+    "AI/_old_files/04_NN/6.1_神经网络算法Nerual_Networks上/6.1 神经网络算法(Nerual Networks)（上）_files"
   ]
 }

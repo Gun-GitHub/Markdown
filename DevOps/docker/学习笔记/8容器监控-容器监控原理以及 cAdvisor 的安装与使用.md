@@ -1,3 +1,4 @@
+[[docker]]
 ## 1. 容器特性:
 
 1. 容器是短期存活的, 并且可以动态调度
@@ -49,7 +50,7 @@ Cgroups 的工作目录 /sys/fs/cgroup 下包含了 Cgroups 的所有内容
 
 Cgroups 包含了很多文件子系统,可用来对不同的资源进行限制, cpu, 内存, pid, 磁盘 io等资源进行限制和监控
 
-![截图](c4204191a9ab147412253170e6dd51da.png)
+![截图](images_08-monitoring-cadvisor/c4204191a9ab147412253170e6dd51da.png)
 
 这些文件夹代表 cgroups 的子系统
 
@@ -65,11 +66,11 @@ docker run --name=nginx --cpus=1 -m=2g --name=nginx -d nginx
 51041a74070e9260e82876974762b8c615ed0a51834565fde8123548912
 ```
 
-![截图](c93500f0d00d057d19103dfc6032580a.png)
+![截图](images_08-monitoring-cadvisor/c93500f0d00d057d19103dfc6032580a.png)
 
 查看以容器 id 为目录的文件夹:
 
-![截图](404526cc11d8bc6c35a2016d0033683f.png)
+![截图](images_08-monitoring-cadvisor/404526cc11d8bc6c35a2016d0033683f.png)
 
 使用 cat 命令查看文件内容:
 
@@ -106,8 +107,14 @@ $ docker inspect nginx |grep Pid
 $ sudo cat /proc/27348/net/dev
 ```
 
-![截图](4b89981b38c4419ab2bf85236e18a3f3.png)
+![截图](images_08-monitoring-cadvisor/4b89981b38c4419ab2bf85236e18a3f3.png)
 
 /proc/27348/net/dev 文件内记录了该容器内每个网卡的接受和发送情况,以及错误数,丢包数等情况,可见容器中的数据都是从这里定时读取并展示的
 
 容器的监控原理是,定时读取 Linux 主机上的相关文件并展示给用户
+
+---
+
+### 关联笔记
+- [[学习笔记/10资源限制-如何通过 cgroup 机制实现资源限制|10资源限制-如何通过 cgroup 机制实现资源限制]]
+- [[学习笔记/7Docker 安全-基于内核的弱隔离系统如何保障安全性|7Docker 安全-基于内核的弱隔离系统如何保障安全性]]

@@ -140,7 +140,7 @@
   
   编译结果如下图所示
   
-  ![image](47ad2e5c034b695ef7b0974b4ae3d380.jpg)
+  ![image](images_slurm-build-rocky/47ad2e5c034b695ef7b0974b4ae3d380.jpg)
   
   将这些文件复制到其他节点并进行安装
   ```sh
@@ -155,7 +155,7 @@
   
   如下图所示
   
-  ![iamge](7509f3bda5a926506c889e9ab5046cc3.jpg)
+  ![iamge](images_slurm-build-rocky/7509f3bda5a926506c889e9ab5046cc3.jpg)
   
   复制这个文件来创建一个配置文件
   ```sh
@@ -215,7 +215,7 @@
     
     效果如下
     
-    ![image](951467120e5849f9474989e10f41a192.webp)
+    ![image](images_slurm-build-rocky/951467120e5849f9474989e10f41a192.webp)
     
     其中，TYPE 为 disk 类型，且没有下分支的，即是没有被分区的硬盘。
     
@@ -226,7 +226,7 @@
     
     效果如下
     
-    ![image](3bcb03cf1e78daa1a93d4be6ebb46998.jpg)
+    ![image](images_slurm-build-rocky/3bcb03cf1e78daa1a93d4be6ebb46998.jpg)
     
     如果需要还需要格式化硬盘
     ```sh
@@ -273,7 +273,7 @@
   
   返回消息结果如下
   
-  ![images](2fc4a021efe53faaaa08aa036cad1b5c.jpg)
+  ![images](images_slurm-build-rocky/2fc4a021efe53faaaa08aa036cad1b5c.jpg)
   
   启动 volume
   ```sh
@@ -328,3 +328,10 @@
   关闭 gluster 集群应该 先关闭应用节点,再关闭存储集群
   
   [gluster存储简介,原理,部署使用](https://www.cnblogs.com/you-men/p/14894404.html)
+
+---
+
+### 关联笔记
+- [[hpc 系统安装]]
+- [[slurm 配置]]
+- [[slurm 守护进程]]

@@ -1,3 +1,6 @@
+[[exporter]]
+[[windows部署exporter]]
+
 完成windows端部署后注入promethus的方案
 
 ```yaml

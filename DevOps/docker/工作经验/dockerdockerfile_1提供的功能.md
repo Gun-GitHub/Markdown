@@ -1,3 +1,4 @@
+[[docker]]
 `docker/dockerfile:1` 是 Docker 官方提供的一个 **Dockerfile 构建器** 的版本标识，它定义了一组支持的语法功能和行为规则。它基于 Docker BuildKit 构建系统，并随着版本的更新逐步引入更多特性。
 
 以下是 `docker/dockerfile:1` 的具体内容和主要功能：
@@ -133,3 +134,10 @@
 ### 总结
 
 `docker/dockerfile:1` 是 BuildKit 支持的官方语法解析器版本，支持标准 Dockerfile 指令和一些高级特性（如挂载、缓存、多阶段构建等）。通过使用这个语法声明，可以启用现代化的构建功能，提升构建效率和灵活性。
+
+---
+
+### 关联笔记
+- [[工作经验/docker 高级构建|docker 高级构建]]
+- [[学习笔记/3Docker 环境下如何配置你的镜像|3Docker 环境下如何配置你的镜像]]
+- [[工作经验/docker 跨平台构建|docker 跨平台构建]]

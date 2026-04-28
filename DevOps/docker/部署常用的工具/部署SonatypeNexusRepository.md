@@ -1,3 +1,4 @@
+[[docker]]
 ```
 [
     {
@@ -332,4 +333,27 @@
 ]
 
 ```
+### Docker 指令
 
+```bash
+docker run -d \
+  --name nexus3 \
+  --restart always \
+  --privileged \
+  --security-opt label=disable \
+  -p 8081:8081 \
+  -p 8082:8082 \
+  -p 8083:8083 \
+  -p 8084:8084 \
+  -p 8085:8085 \
+  -v /etc/localtime:/etc/localtime:ro \
+  -v /data/application/nexus3:/nexus-data \
+  -e INSTALL4J_ADD_VM_PARAMS="-Xms512M -Xmx512M -XX:MaxDirectMemorySize=1g" \
+  sonatype/nexus3:3.75.1
+```
+
+---
+
+### 关联笔记
+- [[学习笔记/5仓库访问-怎样搭建属于你的私有仓库|5仓库访问-怎样搭建属于你的私有仓库]]
+- [[工作经验/containerd 仓库配置|containerd 仓库配置]]

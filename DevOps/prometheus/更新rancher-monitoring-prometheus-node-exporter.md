@@ -1,3 +1,4 @@
+[[promethus]]
 # 更新rancher-monitoring-prometheus-node-exporter 
 
 ```yaml

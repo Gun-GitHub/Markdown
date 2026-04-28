@@ -1,3 +1,4 @@
+[[exporter]]
 config镜像拉取,并上传至私服:
 
 ```sh
@@ -30,11 +31,11 @@ auths:
 
 挂载配置映射卷:
 
-![截图](e46b8e3eff237ffb532e9dc5b0e4c3d4.png)
+![截图](images_部署snmp-export/e46b8e3eff237ffb532e9dc5b0e4c3d4.png)
 
 设置请求参数:
 
-![截图](b5bb392ce87868b851eb5d5743d3ba63.png)
+![截图](images_部署snmp-export/b5bb392ce87868b851eb5d5743d3ba63.png)
 
 官方默认有用的配置,可以仿造的写:
 

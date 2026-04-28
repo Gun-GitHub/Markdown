@@ -75,7 +75,7 @@ SrunPortRange = 30001-30005
 
 这张图来源于付伟强:
 
-![8e4f96ca7ed5ffa5df9ae22f72cc3cf7.png](299469b038b5e00ad567740b8b3eb780.png)
+![8e4f96ca7ed5ffa5df9ae22f72cc3cf7.png](images_slurm-config/299469b038b5e00ad567740b8b3eb780.png)
 
 来自官网:
 
@@ -87,7 +87,15 @@ https://slurm.schedmd.com/slurm.conf.html#OPT_bf_.busy_nodes
 
 这张图来源于宝哥:
 
-![982ab1446549419cea1f616f212dfdb.png](c03f1f3c73f201d18b37fceb74e4251f.png)
+![982ab1446549419cea1f616f212dfdb.png](images_slurm-config/c03f1f3c73f201d18b37fceb74e4251f.png)
 
 来源于 chart_gpt,官方文档里没有这个选项,看着不靠谱
 
+---
+
+### 关联笔记
+- [[slurm 编译笔记(rocky)]]
+- [[slurm 编译笔记(ubuntu)]]
+- [[slurm 守护进程]]
+- [[slurm服务启动指令]]
+- [[slurm 用户费用统计查询]]

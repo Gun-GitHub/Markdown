@@ -4,11 +4,11 @@
 
 ### 架构图
 
-![截图](a5fe8b2f37c2674a4a7f335c055b86dd.png)
+![截图](images_slurm-daemon/a5fe8b2f37c2674a4a7f335c055b86dd.png)
 
 由这些 slurm 守护进程管理的实体
 
-![截图](829ff213056e948f6a4d8e05288f61ed.png)
+![截图](images_slurm-daemon/829ff213056e948f6a4d8e05288f61ed.png)
 
 包括节点、 slurm 中的计算资源、分区(将节点分组为逻辑(可能重叠)集合)、作业或分配给用户的指定时间内的资源，以及作业步骤(作业步骤是作业中的一组任务(可能并行))。
 
@@ -28,3 +28,10 @@
 |slurmrestd|The Slurm REST API daemon.  <br/>Slurm 的 REST API 守护进程。|
 |slurmstepd|The job step manager for Slurm.  <br/>Slurm 的工作步骤经理。|
 |SPANK|Slurm Plug-in Architecture for Node and job (K)control.  <br/>用于节点和作业(k)控制的 slurm 结构插件。|
+
+---
+
+### 关联笔记
+- [[slurm 配置]]
+- [[slurm服务启动指令]]
+- [[slurm 指令]]

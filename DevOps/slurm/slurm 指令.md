@@ -264,3 +264,11 @@ mn1 gpu:GTX1660Super:1,npu:Ascend910:4,v_npu:v_Ascend910:60
 slurm 23.02.4
 [root@slurmdbd-7cd68ddbb-5kt5k /]# 
 ```
+
+---
+
+### 关联笔记
+- [[slurm 守护进程]]
+- [[slurm 配置]]
+- [[slurm 用户费用统计查询]]
+- [[slurm服务启动指令]]

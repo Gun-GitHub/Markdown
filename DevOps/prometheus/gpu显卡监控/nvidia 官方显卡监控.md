@@ -1,3 +1,4 @@
+[[exporter]]
 添加 nvidia DCGM-Exporter helm 仓库:
 
 ```sh

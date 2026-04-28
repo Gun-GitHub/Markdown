@@ -1,3 +1,4 @@
+[[promethus]]
 要在 Kubernetes 中配置 Prometheus 的 ServiceMonitor，使得 Prometheus 中的 **Discovered Labels** 转换成 **Target Labels**，你需要使用 **relabeling** 规则。这些规则允许你在服务发现后对标签进行修改、添加或删除，从而将发现的标签转换为 Prometheus 期望的目标标签。
 
 以下是配置步骤和示例：

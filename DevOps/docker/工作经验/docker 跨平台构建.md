@@ -1,3 +1,4 @@
+[[docker]]
 #手动安装参考
 https://github.com/docker/buildx
 二进制拷贝并命名至/root/.docker/cli-plugins/docker-buildx
@@ -39,3 +40,9 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 aarch64
 
 ```
+
+---
+
+### 关联笔记
+- [[工作经验/docker 高级构建|docker 高级构建]]
+- [[工作经验/dockerdockerfile_1提供的功能|dockerdockerfile_1提供的功能]]

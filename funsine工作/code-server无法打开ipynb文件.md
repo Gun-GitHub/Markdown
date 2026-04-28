@@ -1,3 +1,4 @@
+[[funsine工作]]
 ## code-server 无法打开ipynb文件，报错‘crypto.subtle‘ is not available so webviews will not work的解决方法
 
 ------

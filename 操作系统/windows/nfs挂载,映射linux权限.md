@@ -3,7 +3,7 @@
 
 在我们开始之前，让我们启用 NFS 服务和两个子功能。
 
-![截图](bb49e2b608fcad49dfb5a7d455d45001.png)
+![截图](images_nfs挂载,映射linux权限/bb49e2b608fcad49dfb5a7d455d45001.png)
 
 在 Windows 中安装 NFS 共享的典型方式是使用匿名 (anon) 用户安装远程文件系统：
 
@@ -13,7 +13,7 @@ mount -o anon \\192.168.28.155\mnt\NAS0\media G:
 
 这将根据 NFS 共享的配置权限授予您只读访问权限。
 
-![截图](6a216edea416c36ff925018c2b57e5d9.png)
+![截图](images_nfs挂载,映射linux权限/6a216edea416c36ff925018c2b57e5d9.png)
 
 如果您想要读/写访问权限，则必须添加两个 DWORD 注册表项，其中包含拥有共享的 Unix 用户的 UID 和 GID。
 启动管理 PowerShell 终端。
@@ -23,7 +23,7 @@ New-ItemProperty HKLM:\SOFTWARE\Microsoft\ClientForNFS\CurrentVersion\Default -N
 New-ItemProperty HKLM:\SOFTWARE\Microsoft\ClientForNFS\CurrentVersion\Default -Name AnonymousGID -Value 105  -PropertyType "DWord"
 ```
 
-![截图](fb82e26b3172fbc68ca8167c2a396e94.png)
+![截图](images_nfs挂载,映射linux权限/fb82e26b3172fbc68ca8167c2a396e94.png)
 
 打开注册表:
 
@@ -31,7 +31,7 @@ New-ItemProperty HKLM:\SOFTWARE\Microsoft\ClientForNFS\CurrentVersion\Default -N
 regedit
 ```
 
-![截图](ae7b2862a15ee3504289da896c714095.png)
+![截图](images_nfs挂载,映射linux权限/ae7b2862a15ee3504289da896c714095.png)
 
 重新启动。
 
@@ -43,7 +43,7 @@ regedit
 mount -o anon \\192.168.28.155\mnt\NAS0\media G:
 ```
 
-![截图](dfcce3dec23cf58e0d87a8dfb20cc651.png)
+![截图](images_nfs挂载,映射linux权限/dfcce3dec23cf58e0d87a8dfb20cc651.png)
 
 大多数人可能就此止步了，因为它确实有效。但是，系统上的任何用户都可以挂载此共享，并对该网络资源拥有读/写访问权限。
 
@@ -83,7 +83,7 @@ mount -o nolock \\192.168.100.30\data\nfsdata Z:
 
 效果如下:
 
-![截图](823459278c3c29cde122771ed5d879c6.png)
+![截图](images_nfs挂载,映射linux权限/823459278c3c29cde122771ed5d879c6.png)
 
 如果此方法无效，请仔细检查以下内容：
 

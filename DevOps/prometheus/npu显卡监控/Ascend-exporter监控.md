@@ -1,3 +1,4 @@
+[[exporter]]
 安装NPU监控
 
 [参考文档](https://www.hiascend.com/document/detail/zh/mindx-dl/50rc1/dluserguide/clusterscheduling/dlug_installation_02_000027.html)
@@ -42,7 +43,7 @@ vi npu-exporter-310P-1usoc-v3.0.0.yaml
 
 因为默认启用https，不导入证书无法启动
 
-![截图](2c7a2228bd149827ac5d05c3f4119175.png)
+![截图](images_Ascend-exporter监控/2c7a2228bd149827ac5d05c3f4119175.png)
 
 在
 
@@ -52,7 +53,7 @@ vi npu-exporter-310P-1usoc-v3.0.0.yaml
 
 中找到解决方法，可以设置以http通讯。
 
-![截图](7418212f3f27efa69b762dacb2453749.png)
+![截图](images_Ascend-exporter监控/7418212f3f27efa69b762dacb2453749.png)
 
 910 exporter直接在rancher页面中修改yaml文件添加-enableHTTP=true
 

@@ -12,6 +12,7 @@
   "showUnsupportedFiles": true,
   "showIndentGuide": true,
   "showInlineTitle": true,
-  "autoConvertHtml": false,
-  "promptDelete": false
+  "autoConvertHtml": true,
+  "promptDelete": true,
+  "vimMode": false
 }

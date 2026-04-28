@@ -1,3 +1,4 @@
+[[docker]]
  # 为什么构建容器需要 Namespace
 
 ## 1.什么是 Namespace
@@ -287,3 +288,10 @@ Linux 内核从 2002年 2.4.19 版本开始加入了 Mount Namespace内核 3.8 �
 当 Docker 新建一个容器时,会创建这六种 Namespace，然后将容器中的进程加入这些Namespace之中, 属于 docker 容器中的进程只能看见当前 Namespace 中的系统资源, 正是由于 docker 使用了Linux 中的这些 namespace 技术,才实现了namespace 的进程隔离, 可以说没有namespace 就没有 docker 容器
 
 Namespace 是 Linux 内核的一个特性可以实现在同一主机系统中对进程ID、主机名、用户ID、文件名、网络和进程间通信等资源的隔离,正是由于 docker 使用了这些 namespace 技术,才实现了对容器进程的隔离
+
+---
+
+### 关联笔记
+- [[学习笔记/10资源限制-如何通过 cgroup 机制实现资源限制|10资源限制-如何通过 cgroup 机制实现资源限制]]
+- [[学习笔记/7Docker 安全-基于内核的弱隔离系统如何保障安全性|7Docker 安全-基于内核的弱隔离系统如何保障安全性]]
+- [[学习笔记/1容器技术原理|1容器技术原理]]

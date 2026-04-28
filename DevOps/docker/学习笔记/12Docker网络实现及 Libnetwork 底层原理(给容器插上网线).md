@@ -1,3 +1,4 @@
+[[docker]]
 Docker 定义的网络模型标准: CNM(Container Network Model), 这里提一嘴, k8s 的网路服务并不直接使用 CNM, 而是采用了另一种容器网络模型: CNI(Container Network interface)
 
 CNM(Container Network Model) 是 Docker 发布的容器网络标准,只要满足 CNM 接口的网络方案都可以接入到 Docker 容器网络
@@ -116,7 +117,7 @@ Linux veth 是实现 docker bridge 桥接模式的主要方式之一, veth 是 l
 
 Linux bridge 是一个虚拟设备, 是用来连接网络的设备,相当于物理网络中的交换机 可以用来转发两个 Net Namespace 内的流量
 
-![截图](22fb12138af9ab225c0b09ce34468bb7.png)
+![截图](images_12-docker-network/22fb12138af9ab225c0b09ce34468bb7.png)
 
 这其中:
 
@@ -177,8 +178,14 @@ docker run --it --net=container:busybox1 --name=busybox2 busybox sh
 
 ## 总结
 
-![截图](ed0eb97e867a460fa1c2ab3e9ea761f9.png)
+![截图](images_12-docker-network/ed0eb97e867a460fa1c2ab3e9ea761f9.png)
 
 Libnetwork 的工作流程是完全围绕 CNM 的三个要进行的
 
 k8s 最终选择了 CNI 作为容器网络的定义标准
+
+---
+
+### 关联笔记
+- [[学习笔记/11组件组成-剖析 Docker 组件作用及其底层工作原理|11组件组成-剖析 Docker 组件作用及其底层工作原理]]
+- [[学习笔记/4得心应手掌握 docker 容器基本操作|4得心应手掌握 docker 容器基本操作]]

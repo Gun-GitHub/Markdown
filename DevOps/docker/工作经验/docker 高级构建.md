@@ -1,3 +1,4 @@
+[[docker]]
 ```dockerfile
 # syntax=docker/dockerfile:1
 ```
@@ -78,3 +79,10 @@
 ### 总结
 
 `# syntax=docker/dockerfile:1` 是 BuildKit 特性的重要一部分，明确了 Dockerfile 的解析器版本，可以启用更强大的功能。它对高级用户和现代构建工具非常有用，同时保证了跨平台的一致性和构建的可重复性。
+
+---
+
+### 关联笔记
+- [[工作经验/dockerdockerfile_1提供的功能|dockerdockerfile_1提供的功能]]
+- [[工作经验/docker 跨平台构建|docker 跨平台构建]]
+- [[学习笔记/3Docker 环境下如何配置你的镜像|3Docker 环境下如何配置你的镜像]]

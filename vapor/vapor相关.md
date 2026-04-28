@@ -1,3 +1,9 @@
+**VAPOR**是一个面向**海洋**、大气和太阳**研究**人员的可视化和分析平台**。VAPOR**提供交互式**3D可视化环境，还可以生成动画和静态图像。VAPOR***可在大多数配备现代 3D 显卡的 UNIX 和 Windows 系统上运行***。
+
+VAPOR 数据采集 ( **VDC** ) 数据模型允许用户逐步访问其数据的保真度，从而可以在通用硬件上可视化万亿级数据集。VAPOR 还可以直接导入包括 WRF、MOM、POP、ROMS 以及部分 GRIB 和 NetCDF 文件在内的数据格式。
+
+用户可以使用 VAPOR 的交互式 Python 解释器进行即席分析；该解释器允许根据输入模型数据创建、修改和可视化新变量。
+
 1.安装vapor
 
 [官方连接](https://github.com/NCAR/VAPOR/releases/tag/v3.9.1)
@@ -46,7 +52,7 @@ export LD_LIBRARY_PATH=/path/to/VAPOR3-3.9.2-Linux/lib
 vapor [options] [session.vs3] [data files...]
 ```
 
-       **vapor 指令参数极其相关参数**
+**vapor 指令参数极其相关参数**
 
 |  OPTION                                   |NUM_ARGS                                       |                         DEFAULT|                           中文翻译|
 |--|:--:|--|--|
@@ -57,7 +63,7 @@ vapor [options] [session.vs3] [data files...]
 |-resolution|1|Output resolution when using -render.defoult:1920x1080|使用 -render 时的输出分辨率。默认:1920x1080|
 |-timesteps|1|Timesteps to render when using -render. Defaults to all timesteps. defoult:0:0|       使用 -render 时渲染的时间步长。默认为所有时间步长。默认:0:0|
 
-        比如使用 vapor 打开一个 wrf 文件,指令如下:
+比如使用 vapor 打开一个 wrf 文件,指令如下:
 
 ```sh
 ./vapor -ftype wrf /var/hpc-root/zj/Downloads/wrfout_d01_2005-06-04_06_05_00.unknow

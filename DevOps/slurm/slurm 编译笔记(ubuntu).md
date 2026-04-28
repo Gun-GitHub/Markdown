@@ -241,3 +241,10 @@ Domains=default.svc.cluster.local svc.cluster.local cluster.local
 systemctl restart  systemd-resolved.service
 resolvectl status
 ```
+
+---
+
+### 关联笔记
+- [[slurm 编译笔记(rocky)]]
+- [[slurm 配置]]
+- [[slurm 守护进程]]

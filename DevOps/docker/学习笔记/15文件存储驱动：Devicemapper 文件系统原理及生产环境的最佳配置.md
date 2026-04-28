@@ -1,3 +1,4 @@
+[[docker]]
 由于 aufs 目前并未合并到 linux 内核主线，只有 ubuntu 和 debian 等少数操作系统支持 aufs， 因此比较常用的 ==联合文件系统== 是 == Devicemapper== 
 
 AUFS 是一种文件系统
@@ -33,7 +34,7 @@ devicemapper 将主要的工作部分分为：
    
    记录了映射设备在目标设备的起始地址、范围和目标设备的类型等变量
 
-![截图](c8b07c0f3075ef8d7cb3d79678e1bec2.png)
+![截图](images_15-devicemapper-storage/c8b07c0f3075ef8d7cb3d79678e1bec2.png)
 
 Devicemapper 在内核中通过很多模块化的映射驱动（target driver) 插件实现了 ==对真正 IO 请求的拦截、过滤和转发工作== 比如 Raid、软件加密、廋供给（Thin Provisioning) 等。
 
@@ -54,3 +55,9 @@ Devicemapper 在内核中通过很多模块化的映射驱动（target driver) �
 docker 使用了瘦供给的快照（snapshot）技术
 
 当 docker 使用 Devicemapper 作为文件存储驱动时，==docker 将镜像和容器文件存储子啊瘦供给池（thinpool）中，并将这些内容挂载在/var/lib/docker/devicemapper/目录下
+
+---
+
+### 关联笔记
+- [[学习笔记/14文件存储驱动：AUFS 文件系统原理及生产环境的最佳配置|14文件存储驱动：AUFS 文件系统原理及生产环境的最佳配置]]
+- [[学习笔记/13数据存储_剖析Docker卷与持久化数据存储的底层原理(给容器插上磁盘)|13数据存储_剖析Docker卷与持久化数据存储的底层原理(给容器插上磁盘)]]

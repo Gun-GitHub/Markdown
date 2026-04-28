@@ -1,3 +1,5 @@
+[[windows]]
+[[exporter]]
 官方页面：
 
 ```
@@ -11,7 +13,7 @@ https://release-assets.githubusercontent.com/github-production-release-asset/665
 ```
 
 注册表路径：
-![截图](8d71354cc3a11b15929c4a4c30f94545.png)
+![截图](images_windows部署exporter/8d71354cc3a11b15929c4a4c30f94545.png)
 
 无法设置安装路径，默认安装路径为：
 
@@ -29,7 +31,7 @@ C:\Program Files\windows_exporter\config.yaml
 
 设置：--web.listen-address="0.0.0.0:9182"
 
-![截图](d2672dabb8ff43ffc2b6cabc9d9753ac.png)
+![截图](images_windows部署exporter/d2672dabb8ff43ffc2b6cabc9d9753ac.png)
 
 然后一路next
 
@@ -42,6 +44,6 @@ http://192.168.1.202:9182/metrics
 
 能访问到如下数据：
 
-![截图](817e61f99dc8ee80665a52f8dc6e4c7c.png)
+![截图](images_windows部署exporter/817e61f99dc8ee80665a52f8dc6e4c7c.png)
 
 即为部署成功

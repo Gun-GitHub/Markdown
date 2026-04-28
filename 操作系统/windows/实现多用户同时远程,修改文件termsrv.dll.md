@@ -27,13 +27,13 @@ B80001000089813806000090
 
 然后另存为一份
 
-![截图](5d46f9b2bece6a2095a813809b53c3db.png)
+![截图](images_实现多用户同时远程,修改文件termsrv.dll/5d46f9b2bece6a2095a813809b53c3db.png)
 
-![截图](89b5ac05b1e8e4b5a1ee60bed13d084a.png)
+![截图](images_实现多用户同时远程,修改文件termsrv.dll/89b5ac05b1e8e4b5a1ee60bed13d084a.png)
 
-![截图](1cf32670b214521390400313c7b0b3a1.png)
+![截图](images_实现多用户同时远程,修改文件termsrv.dll/1cf32670b214521390400313c7b0b3a1.png)
 
-![截图](98ce5d5f21fe25511562d57224536b5f.png)
+![截图](images_实现多用户同时远程,修改文件termsrv.dll/98ce5d5f21fe25511562d57224536b5f.png)
 
 <br/>
 

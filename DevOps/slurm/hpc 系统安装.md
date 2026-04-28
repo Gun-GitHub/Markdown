@@ -436,7 +436,7 @@ yptest
 （若只有【Test 3: yp_match WARNING: No such key in map (Map passwd.byname, key nobody)】一项错误则服务正常）
 ```
 
-![yptest](b7df4d111d497b5d9370c8139c55c77e.png)
+![yptest](images_hpc-install/b7df4d111d497b5d9370c8139c55c77e.png)
 
 ```sh
 #查看数据库文件列表
@@ -568,8 +568,7 @@ for i in $(seq 1 4);do ssh compute$i "systemctl enable munge --now";done
 for i in $(seq 1 4);do ssh compute$i "systemctl status munge | grep running";done
 ```
 
-[slurm.conf](files/slurm.conf) 
-[slurm.conf简版](files/slurm_simple.conf)
+[slurm.conf](DevOps/slurm/resource_hpc-install/slurm.conf)
 
 ```sh
 #配置主配置文件（控制节点）
@@ -581,7 +580,7 @@ for i in $(seq 1 4);do ssh compute$i "systemctl status munge | grep running";don
 mkdir /etc/slurm && vi /etc/slurm/slurm.conf
 ```
 
-[slurmdbd.conf](files/slurmdbd.conf)
+[slurmdbd.conf](DevOps/slurm/resource_hpc-install/slurmdbd.conf)
 
 ```sh
 #数据库配置（控制节点）
@@ -589,7 +588,7 @@ mkdir /etc/slurm && vi /etc/slurm/slurm.conf
 vi /etc/slurm/slurmdbd.conf
 ```
 
-[cgroup.conf](files/cgroup.conf)
+[cgroup.conf](DevOps/slurm/resource_hpc-install/cgroup.conf)
 
 ```sh
 #cgroup限制配置（控制节点）
@@ -600,6 +599,10 @@ vi /etc/slurm/slurmdbd.conf
 vi /etc/slurm/cgroup.conf
 ```
 
+[gres.conf](DevOps/slurm/resource_hpc-install/gres.conf)
+```
+用于显卡配置的
+```
 ## 4.5 设置验证支持
 
 ### 修改slurm.conf 和slurmdbd.conf 的jwt 验证支持配置（以上配置文件已做配置无需下面操作）
@@ -1308,7 +1311,7 @@ zabbix
 创建“Hpc management”“Hpc compute”“Hpc storage”“Hpc glusterfs”“Hpc switch”的主机群组
 ```
 
-![yptest](0267d0c25688bb89f4b8766ebd3505c3.png)
+![yptest](images_hpc-install/0267d0c25688bb89f4b8766ebd3505c3.png)
 
 ### 添加主机
 
@@ -1316,8 +1319,8 @@ zabbix
 #第一次进入先删掉所有主机条目
 ```
 
-![yptest](530071875d16f8c939a9dd773ed10f5b.png)
-![yptest](1fbec406e7c3749ba036f910b54d8fe2.png)
+![yptest](images_hpc-install/530071875d16f8c939a9dd773ed10f5b.png)
+![yptest](images_hpc-install/1fbec406e7c3749ba036f910b54d8fe2.png)
 
 #### 添加管理节点
 
@@ -1435,7 +1438,7 @@ zabbix
 #switch和庆泽确认snmp共同体
 ```
 
-![yptest](e29297f16bcb23f59a921eb7ef9a859b.jpg)
+![yptest](images_hpc-install/e29297f16bcb23f59a921eb7ef9a859b.jpg)
 
 ### 监控项添加问题
 
@@ -1507,3 +1510,10 @@ systemctl opensm
 ```sh
 在所有机器同时启动时，由于共享盘还没有启动完成，或者本地网卡还没启动完成，挂载时可能会挂载不上
 ```
+
+---
+
+### 关联笔记
+- [[slurm 编译笔记(rocky)]]
+- [[slurm 守护进程]]
+- [[slurm 配置]]

@@ -1,3 +1,4 @@
+[[docker]]
 # 镜像使用: Docker 环境下如何配置你的镜像
 
 ## 1.讲解镜像的基本操作
@@ -107,12 +108,19 @@ cd /var/lib/docker/overlay2
 tree
 ```
 
-![截图](fff7e007cf30b7139bcd9a0878b41c01.png)
+![截图](images_03-dockerfile-config/fff7e007cf30b7139bcd9a0878b41c01.png)
 
 通过图片可以看到,dockerfile 的每一层都生成了一个镜像层
 
-![截图](fbdd407e231083e2ce8220bc16237e75.png)
+![截图](images_03-dockerfile-config/fbdd407e231083e2ce8220bc16237e75.png)
 
 Docker镜像静态的分层管理的文件组合,镜像底层的实现依赖于联合文件系统(UnionFS)
 
 镜像是由一系列的镜像层(layer) 组成,每一层代表了构建镜像过程中的一次提交,当需要修改镜像内的某个文件时,只需要在当前镜像层的基础上新建一个镜像层,并且只存放修改过的文件内容
+
+---
+
+### 关联笔记
+- [[学习笔记/4得心应手掌握 docker 容器基本操作|4得心应手掌握 docker 容器基本操作]]
+- [[工作经验/dockerdockerfile_1提供的功能|dockerdockerfile_1提供的功能]]
+- [[学习笔记/5仓库访问-怎样搭建属于你的私有仓库|5仓库访问-怎样搭建属于你的私有仓库]]

@@ -1,6 +1,7 @@
+[[docker]]
 ## Docker 的组件构成
 
-![截图](16af530bb979c792dcfcb4458e741458.png)
+![截图](images_11-docker-components/16af530bb979c792dcfcb4458e741458.png)
 
 docker 的服务架构采用 c/s 模式,主要由客户端和服务端组成. 客户端负责发生操作指令, 服务端负责接收并处理操作指令
 
@@ -10,7 +11,7 @@ docker 的服务架构采用 c/s 模式,主要由客户端和服务端组成. �
 
 在	 docker 的安装路径下, 执行 ls 指令可以看到 docker 的相关组件:
 
-![截图](9f6077308929d72784732f8892635a2e.png)
+![截图](images_11-docker-components/9f6077308929d72784732f8892635a2e.png)
 
 这些组件根据职责可以分为以下三大类:
 
@@ -205,4 +206,11 @@ busybox   9778    running   /home/centos/runc     2024-09-06T09:25:32.44195727Z 
 2. containerd 相关的组件负责管理容器的生命周期
 3. runc 负责正真意义上创建和启动容器
 
-![截图](88846ad8b503acd688c7dcb57e85a7a4.png)
+![截图](images_11-docker-components/88846ad8b503acd688c7dcb57e85a7a4.png)
+
+---
+
+### 关联笔记
+- [[学习笔记/12Docker网络实现及 Libnetwork 底层原理(给容器插上网线)|12Docker网络实现及 Libnetwork 底层原理(给容器插上网线)]]
+- [[工作经验/containerd 仓库配置|containerd 仓库配置]]
+- [[学习笔记/13数据存储_剖析Docker卷与持久化数据存储的底层原理(给容器插上磁盘)|13数据存储_剖析Docker卷与持久化数据存储的底层原理(给容器插上磁盘)]]

@@ -1,3 +1,4 @@
+[[协议]]
 ## 介绍
 
 RFB（Remote Framebuffer）协议是一种用于远程桌面访问的协议，常用于 VNC（Virtual Network Computing）系统中。它的设计目标是允许用户通过网络访问远程计算机的桌面环境，以便在另一台计算机上查看和控制远程计算机的显示内容。

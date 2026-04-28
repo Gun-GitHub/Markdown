@@ -1,135 +1,72 @@
 [[windows]]
-## 目录
 
-### 下载WinHex
+# WinHex：十六进制编辑器与磁盘工具
 
-### 安装WinHex
+## 简介
 
-### 查看现成的磁盘文件
+WinHex 是一款以通用十六进制编辑器为核心的专业工具，广泛应用于以下领域：
 
-### 手动创建磁盘文件
+- **计算机取证**：磁盘镜像分析、文件恢复、隐藏数据查找
+- **数据恢复**：恢复删除文件、修复损坏硬盘/存储卡
+- **低级数据处理**：直接编辑磁盘扇区、RAM、文件原始字节
+- **IT 安全分析**：漏洞分析、文件结构逆向、加密数据检测
 
-		创建磁盘文件
+**主要功能**：
+- 查看/编辑磁盘、分区、RAM、文件（支持超过 4GB 的大文件）
+- 支持 FAT12/16/32、exFAT、NTFS、Ext2/3/4、CDFS 等多种文件系统
+- 驱动器克隆与镜像解释
+- 智能搜索替换、数据格式转换（二进制/十六进制/ASCII）
+- Hash 计算（CRC32、MD5、SHA-1）、数据加密/解密
+- 文件粉碎（不可恢复）
+- 连接/分割/合并/分析/比较文件
 
-		创建分区
+## 安装
 
-		安装引导程序
+### 1. 下载
+- 官网：[WinHex: Hex Editor & Disk Editor](https://www.x-ways.net/winhex/)
+- 下载完成后得到 `winhex.zip`
 
-		查看磁盘
+![截图](images_WinHex安装与使用/d932ab3dcafbf439d1772ea2a690e27e.png)
 
-### 下载WinHex
+### 2. 安装
+解压 zip 文件，以管理员身份直接运行 `winhex.exe` 即可（绿色软件，免安装）。
 
-#### [下载链接](https://so.csdn.net/so/search?q=WinHex&spm=1001.2101.3001.7020)：WinHex: Hex Editor & Disk Editor, Computer Forensics & Data Recovery Software
+![截图](images_WinHex安装与使用/40dd92cac7652e03474f49b16f3fb51f.png)
 
-![截图](d932ab3dcafbf439d1772ea2a690e27e.png)
+![截图](images_WinHex安装与使用/2a861757691f68c719eefcd882533b48.png)
 
-### 安装WinHex
+## 常见用途
 
-#### 1).下载完成后出现winhex.zip文件，解压文件，放置到合适位置。如图为winhex.zip内的内容。
+### 查看磁盘文件
+WinHex 可以直接打开 raw 格式的磁盘镜像文件（如 `generic.raw`），查看其十六进制内容及分区结构。
 
-![截图](40dd92cac7652e03474f49b16f3fb51f.png)
+> **提示**：VMware/VirtualBox/KVM 创建的 vmdk、qcow2 等格式需先转换为 raw 格式，再用 WinHex 查看。
 
-#### 2).解压完成之后，直接以管理员方式直接打开winhex.exe文件即可。
+![截图](images_WinHex安装与使用/c062bbd5b380c2065b4afcb42a9c7a9d.png)
 
-![截图](2a861757691f68c719eefcd882533b48.png)
+![截图](images_WinHex安装与使用/197b85d5e158b4cb618ca0e29c65800d.png)
 
-#### 查看现成的磁盘文件
-
-		磁盘文件可以通过kvm、vmware、virtualbox等软件进行创建，但是需要将vmdk，qcow2等格式的自盘文件转换为raw格式。
-
-```powershell
-[root@zyq images]# /home/zyq/qemu-img convert -p -O raw generic.qcow2 generic.raw
-    (100.00/100%)
-[root@zyq images]# 
-[root@zyq images]# ll generic.* -h
--rw------- 1 root root  21G Apr  6 08:54 generic.qcow2
--rw-r--r-- 1 root root  20G Apr  6 17:49 generic.raw
-[root@zyq images]# ll generic.*   
--rw------- 1 root root 21478375424 Apr  6 08:54 generic.qcow2
--rw-r--r-- 1 root root 21474836480 Apr  6 17:49 generic.raw
- 
-```
-
-查看转换格式后的磁盘文件
-
-![截图](c062bbd5b380c2065b4afcb42a9c7a9d.png)
-
-![截图](197b85d5e158b4cb618ca0e29c65800d.png)
-
-### 手动创建磁盘文件
-
-### 1. 创建磁盘文件
+### 手动创建磁盘文件并编辑
+结合 `dd`、`fdisk`、`grub2-install` 等 Linux 工具，可以手动构建磁盘镜像并通过 WinHex 查看其结构。
 
 ```sh
-[root@zyq tmp]# dd if=/dev/zero of=/tmp/test.img bs=512 count=100000
-100000+0 records in
-100000+0 records out
-51200000 bytes (51 MB) copied, 0.0909236 s, 563 MB/s
- 
-[root@zyq tmp]# ll test.img  
--rw-r--r-- 1 root root 51200000 Apr  7 09:00 test.img
- 
-[root@zyq tmp]# ll test.img -h
--rw-r--r-- 1 root root 49M Apr  7 09:00 test.img
+# 1. 创建空磁盘文件
+dd if=/dev/zero of=/tmp/test.img bs=512 count=100000
+
+# 2. 创建分区
+fdisk test.img
+
+# 3. 安装引导程序
+grub2-install test.img
+
+# 4. 用 WinHex 打开 test.img 查看 MBR、分区表、引导代码等
 ```
 
-### 2.创建分区
+![截图](images_WinHex安装与使用/010ee810bbee911b8b694973753b2889.png)
 
-```sh
-[root@zyq tmp]# fdisk test.img
-Welcome to fdisk (util-linux 2.23.2).
- 
-Changes will remain in memory only, until you decide to write them.
-Be careful before using the write command.
- 
-Device does not contain a recognized partition table
-Building a new DOS disklabel with disk identifier 0xfd823fb1.
- 
-Command (m for help): n
-Partition type:
-   p   primary (0 primary, 0 extended, 4 free)
-   e   extended
-Select (default p): 
-Using default response p
-Partition number (1-4, default 1): 
-First sector (2048-99999, default 2048): 
-Using default value 2048
-Last sector, +sectors or +size{K,M,G} (2048-99999, default 99999): 
-Using default value 99999
-Partition 1 of type Linux and of size 47.8 MiB is set
- 
-Command (m for help): w
-The partition table has been altered!
- 
-Syncing disks.
- 
- 
-[root@zyq tmp]# partprobe test.img
-[root@zyq tmp]# fdisk test.img -l
- 
-Disk test.img: 51 MB, 51200000 bytes, 100000 sectors
-Units = sectors of 1 * 512 = 512 bytes
-Sector size (logical/physical): 512 bytes / 512 bytes
-I/O size (minimum/optimal): 512 bytes / 512 bytes
-Disk label type: dos
-Disk identifier: 0xfd823fb1
- 
-   Device Boot      Start         End      Blocks   Id  System
-test.img1            2048       99999       48976   83  Linux
-```
+## 关联笔记
 
-### 3.安装引导程序
-
-```sh
-[root@zyq tmp]# grub2-install test.img
-Installing for x86_64-efi platform.
-Installation finished. No error reported.
-```
-
-### 4.查看磁盘
-
-![截图](010ee810bbee911b8b694973753b2889.png)
-
-core.img占据的空间大小
-
-2048*512/1024-0.5=1023.5Kbytes
+- **[[实现多用户同时远程,修改文件termsrv.dll]]** — 使用 WinHex 修改 `termsrv.dll` 的十六进制内容，解除 Windows 远程桌面会话数限制
+- **[[操作系统和系统内核的关系]]** — 操作系统底层结构知识，与 WinHex 的磁盘/内核分析场景相关
+- **[[nfs挂载,映射linux权限]]** — Windows 与 Linux 存储互通场景
+- **Docker 存储驱动**（DevOps 笔记）— 文件系统底层原理，磁盘管理与 WinHex 的磁盘编辑能力可形成互补知识体系
