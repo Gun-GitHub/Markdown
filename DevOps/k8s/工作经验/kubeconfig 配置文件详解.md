@@ -1,3 +1,4 @@
+[[k8s工作经验]]
 `kubeconfig` 文件是 Kubernetes 用来存储集群、用户和上下文信息的配置文件。这个文件允许 `kubectl` 和其他 Kubernetes 工具与集群进行通信。以下是 `kubeconfig` 文件中常见字段的详细解释：
 
 ### 1. `apiVersion`

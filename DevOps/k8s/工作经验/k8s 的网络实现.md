@@ -1,3 +1,4 @@
+[[k8s工作经验]]
 Kubernetes 的网络服务并不直接使用 **CNM**（Container Network Model），而是采用了另一种容器网络模型：**CNI**（Container Network Interface）。以下是它们之间的对比和 Kubernetes 的网络模型说明：
 
 ---

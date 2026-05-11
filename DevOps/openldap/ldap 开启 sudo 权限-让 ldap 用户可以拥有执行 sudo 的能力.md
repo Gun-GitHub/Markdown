@@ -1,4 +1,4 @@
-[[ldap]]
+[[openldap]]
 # ldap 开启 sudo 权限:让 ldap 用户可以拥有执行 sudo 的能力
 
 ## ldap 服务端

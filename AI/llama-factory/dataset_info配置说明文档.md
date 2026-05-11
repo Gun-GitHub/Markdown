@@ -1,5 +1,5 @@
 [[llama-factory]]
-[dataset_info.json](dataset_info.json) 包含了所有可用的数据集。如果您希望使用自定义数据集，请**务必**在 `dataset_info.json` 文件中添加*数据集描述*，并通过修改 `dataset: 数据集名称` 配置来使用数据集。
+dataset_info.json 包含了所有可用的数据集。如果您希望使用自定义数据集，请**务必**在 `dataset_info.json` 文件中添加*数据集描述*，并通过修改 `dataset: 数据集名称` 配置来使用数据集。
 
 其中 `dataset_info.json` 文件应放置在 `dataset_dir` 目录下。您可以通过修改 `dataset_dir` 参数来使用其他目录。默认值为 `./data`。
 
@@ -48,7 +48,7 @@
 
 ### 指令监督微调数据集
 
-- [样例数据集](alpaca_zh_demo.json)
+- 样例数据集
 
 在指令监督微调时，`instruction` 列对应的内容会与 `input` 列对应的内容拼接后作为提示词，即提示词为 `instruction\ninput`。而 `output` 列对应的内容为模型回答。
 
@@ -95,7 +95,7 @@
 
 ### 预训练数据集
 
-- [样例数据集](c4_demo.jsonl)
+- 样例数据集
 
 在预训练时，只有 `text` 列中的内容会用于模型学习。
 
@@ -151,25 +151,25 @@
 
 ### KTO 数据集
 
-KTO 数据集需要提供额外的 `kto_tag` 列。详情请参阅 [sharegpt](#sharegpt-格式)。
+KTO 数据集需要提供额外的 `kto_tag` 列。详情请参阅 sharegpt。
 
 ### 多模态图像数据集
 
-多模态图像数据集需要提供额外的 `images` 列。详情请参阅 [sharegpt](#sharegpt-格式)。
+多模态图像数据集需要提供额外的 `images` 列。详情请参阅 sharegpt-格式。
 
 ### 多模态视频数据集
 
-多模态视频数据集需要提供额外的 `videos` 列。详情请参阅 [sharegpt](#sharegpt-格式)。
+多模态视频数据集需要提供额外的 `videos` 列。详情请参阅 sharegpt。
 
 ### 多模态音频数据集
 
-多模态音频数据集需要提供额外的 `audios` 列。详情请参阅 [sharegpt](#sharegpt-格式)。
+多模态音频数据集需要提供额外的 `audios` 列。详情请参阅 sharegpt。
 
 ## Sharegpt 格式
 
 ### 指令监督微调数据集
 
-- [样例数据集](glaive_toolcall_zh_demo.json)
+- 样例数据集
 
 相比 alpaca 格式的数据集，sharegpt 格式支持**更多的角色种类**，例如 human、gpt、observation、function 等等。它们构成一个对象列表呈现在 `conversations` 列中。
 
@@ -218,11 +218,11 @@ KTO 数据集需要提供额外的 `kto_tag` 列。详情请参阅 [sharegpt](#s
 
 ### 预训练数据集
 
-尚不支持，请使用 [alpaca](#alpaca-格式) 格式。
+尚不支持，请使用 **alpaca** 格式。
 
 ### 偏好数据集
 
-- [样例数据集](dpo_zh_demo.json)
+- 样例数据集
 
 Sharegpt 格式的偏好数据集同样需要在 `chosen` 列中提供更优的消息，并在 `rejected` 列中提供更差的消息。
 
@@ -272,7 +272,7 @@ Sharegpt 格式的偏好数据集同样需要在 `chosen` 列中提供更优的�
 
 ### KTO 数据集
 
-- [样例数据集](kto_en_demo.json)
+- 样例数据集
 
 KTO 数据集需要额外添加一个 `kto_tag` 列，包含 bool 类型的人类反馈。
 
@@ -309,7 +309,7 @@ KTO 数据集需要额外添加一个 `kto_tag` 列，包含 bool 类型的人�
 
 ### 多模态图像数据集
 
-- [样例数据集](mllm_demo.json)
+- 样例数据集
 
 多模态图像数据集需要额外添加一个 `images` 列，包含输入图像的路径。
 
@@ -351,7 +351,7 @@ KTO 数据集需要额外添加一个 `kto_tag` 列，包含 bool 类型的人�
 
 ### 多模态视频数据集
 
-- [样例数据集](mllm_video_demo.json)
+- 样例数据集
 
 多模态视频数据集需要额外添加一个 `videos` 列，包含输入视频的路径。
 
@@ -393,7 +393,7 @@ KTO 数据集需要额外添加一个 `kto_tag` 列，包含 bool 类型的人�
 
 ### 多模态音频数据集
 
-- [样例数据集](mllm_audio_demo.json)
+- 样例数据集
 
 多模态音频数据集需要额外添加一个 `audios` 列，包含输入音频的路径。
 

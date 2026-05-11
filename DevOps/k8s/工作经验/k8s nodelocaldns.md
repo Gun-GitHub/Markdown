@@ -1,3 +1,4 @@
+[[k8s工作经验]]
 k8s nodelocaldns 设置时存放在
 
 project: system-> namespace: kube-system -> configMap: nodelocaldns -> key: Corefile:

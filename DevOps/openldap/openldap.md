@@ -2,5 +2,4 @@
 tags:
   - root
 ---
-[[windows]]
-[[linux]]
+[[sssd]]

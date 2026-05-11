@@ -1,3 +1,4 @@
+[[k8s工作经验]]
 在 Kubernetes 中，自定义资源定义（CRD, Custom Resource Definition）是用来扩展 Kubernetes API 的一种机制，使得用户可以定义和管理自定义资源（CR）。CRD 的配置文件结构包括许多字段，每个字段都有其特定的作用。下面是 CRD 的各个字段的详细说明：
 
 ### CRD YAML 结构

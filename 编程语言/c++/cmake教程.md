@@ -25,7 +25,7 @@ CMake 是一个项目构建工具，并且是跨平台的。关于项目构建�
 
 而 CMake 恰好能解决上述问题， 其允许开发者指定整个工程的编译流程，在根据编译平台，自动生成本地化的Makefile和工程文件，最后用户只需make编译即可，所以可以把CMake看成一款自动生成 Makefile的工具，其编译流程如下图：
 
-![截图](./iamge_cmake教程/d54f800dc9590be4fd3ec1bf6efebec3.png)
+![截图](./image_cmake教程/d54f800dc9590be4fd3ec1bf6efebec3.png)
 
 - 蓝色虚线表示使用makefile构建项目的过程
 - 红色实线表示使用cmake构建项目的过程

@@ -1,3 +1,4 @@
+[[k8s工作经验]]
 ```sh
 (base) [root@mn1 mydateset]# openssl x509 -in /etc/kubernetes/pki/apiserver.crt -text -nooutCertificate:
     Data:

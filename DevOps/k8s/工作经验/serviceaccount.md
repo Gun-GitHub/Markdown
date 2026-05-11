@@ -1,3 +1,4 @@
+[[k8s工作经验]]
 在 Kubernetes 中，当你挂载一个 ServiceAccount 到 Pod 时，Kubernetes 会在 Pod 的容器内自动注入一些信息，主要是用于 API 访问的凭证。具体来说，挂载的内容通常包括：
 
 1. **ServiceAccount Token**：一个 JWT 令牌，通常位于 `/var/run/secrets/kubernetes.io/serviceaccount/token`。这个令牌用于身份验证。

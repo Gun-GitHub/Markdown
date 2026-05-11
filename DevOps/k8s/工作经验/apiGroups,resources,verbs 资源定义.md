@@ -1,3 +1,4 @@
+[[k8s工作经验]]
 在 Kubernetes 中，`ClusterRole` 是一种权限控制资源，它定义了一组访问权限，用于控制对集群范围内资源的访问。`ClusterRole` 中的 `rules` 字段包含了 `apiGroups`、`resources` 和 `verbs` 三个主要部分。以下是这些字段可以填写的内容：
 
 ### 1. **`apiGroups`**

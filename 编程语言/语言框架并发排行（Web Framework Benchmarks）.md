@@ -1,3 +1,4 @@
+[[编程语言]]
 [Web Framework Benchmarks](https://www.techempower.com/benchmarks/#section=data-r23&test=db&b=7&s=3&p=zik0zj-zik0zj-zik0zj-zik0zj-zik0zj-18y67&w=zik0zj-zik0zj-zik0zj-hra0hr&d=e7&a=2&o=f)
 
 ![截图|42|2038](image_语言框架并发排行/278691653e86e5cd684720f4788ee95c.png)

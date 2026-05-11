@@ -2,5 +2,4 @@
 tags:
   - root
 ---
-[[windows]]
-[[linux]]
+[[k8s工作经验]]
