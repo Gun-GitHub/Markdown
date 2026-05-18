@@ -1,5 +1,8 @@
 {
   "cssTheme": "Blue Topaz",
   "showViewHeader": true,
-  "nativeMenus": true
+  "nativeMenus": true,
+  "accentColor": "",
+  "theme": "moonstone",
+  "baseFontSize": 16
 }

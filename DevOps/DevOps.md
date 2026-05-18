@@ -7,3 +7,4 @@ tags:
 [[k8s/k8s|k8s]]
 [[helm/helm|helm]]
 [[slurm]]
+[[裸金属]]

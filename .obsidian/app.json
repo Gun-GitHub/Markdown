@@ -14,5 +14,6 @@
   "showInlineTitle": true,
   "autoConvertHtml": true,
   "promptDelete": true,
-  "vimMode": false
+  "vimMode": false,
+  "tabSize": 4
 }
