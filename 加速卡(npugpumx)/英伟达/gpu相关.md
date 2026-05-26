@@ -1,11 +1,8 @@
 [[英伟达]]
 CUDA
-
-  ## 安装
-
-- Ubuntu版
-  1. 安装GPU驱动
-
+# 安装
+## 一. Ubuntu版
+### 1. 安装GPU驱动
 ```sh
 # 安装相关依赖
 sudo apt-get install gcc-7 make -y
@@ -17,16 +14,11 @@ sudo ubuntu-drivers autoinstall # 安装后需要重启系统
 # 这个命令输出结果会展示驱动版本和cuda版本，但只有driver版本是真的，
 # 显示的cuda版本是当前显卡支持的最高版本，cuda的真正版本要等装完cuda后使用nvcc -V查看
 nvidia-smi 
-
 ```
 
-```
-2. 安装CUDA
-```
-
+### 2. 安装CUDA
 根据nvidia-smi的输出，查看支持的最高cuda版本，选择合适的cuda版本。
 到[nvidia官网](https://developer.nvidia.com/cuda-toolkit-archive)下载对应cuda版本的run文件，如安装CUDA 11.1:
-
 ```sh
 wget https://developer.download.nvidia.com/compute/cuda/11.1.1/local_installers/cuda_11.1.1_455.32.00_linux.run
 sudo sh cuda_11.1.1_455.32.00_linux.run --silent --toolkit
@@ -38,81 +30,76 @@ source ~/.bashrc
 nvcc -V
 ```
 
-```
-3. 安装cudnn
-```
-
+### 3. 安装cudnn
 cudnn同样需要到nvidia官网下载，要注意版本与cuda对应，下载完之后会是个压缩包，将压缩包解压，将其中的关键文件拷贝到cuda安装路径下即可。
-
 ```sh
 #假设下载的压缩包文件名是cudnn.tgz
 tar -zxvf cudnn.tgz 
 sudo cp cuda/include/cudnn*.h /usr/local/cuda-11.6/include
 sudo cp cuda/lib64/libcudnn* /usr/local/cuda-11.6/lib64
 sudo chmod a+r /usr/local/cuda-11.6/include/cudnn*.h /usr/local/cuda-11.6/lib64/libcudnn*
-
 ```
-
-```
-    用户也可以考虑使用conda等虚拟环境来安装cuda和cudnn，这样可以实现多个不同的cuda版本环境，不同用户之间的环境可以相互隔离。
-```
-
+用户也可以考虑使用conda等虚拟环境来安装cuda和cudnn，这样可以实现多个不同的cuda版本环境，不同用户之间的环境可以相互隔离。
 而且conda可以直接安装cuda-toolkit
 
-- Debian版
-  1. 下载并安装驱动
+## 二. Debian版
+### 1. 下载并安装驱动
 先使用lspci |grep VGA查看显卡型号，然后到nvidia官网上找对显卡型号对应版本的驱动并下载
-  2. 禁用nouveau
-     
-      nouveau是通过逆向“Nvidia的Linux驱动”创造的一个开源第三方Nvidia显卡驱动程序，因此其效果差，性能低。**在手动安装NVIDIA时需要禁用nouveau驱动。**
-     1. 终端执行以下命令修改文件。
-        
-         sudo vi /etc/modprobe.d/blacklist.conf
-        
-         以下内容复制到文件中
-        
-           blacklist nouveau   
-        
-           blacklist lbm-nouveau   
-        
-           options nouveau modeset=0 
-        
-           alias nouveau off   
-        
-           alias lbm-nouveau off
-        
-         补充说明：文件名其实不重要，重要的是文件内容和文件后缀用conf。
-        
-        b. 由于nouveau是构建在内核中的，所以要执行下面命令生效:
-        
-        sudo update-initramfs -u
-        
-        c. 重启
-        
-        reboot
-        
-        重启后查看nouveau有没有运行，没输出代表禁用生效
-        
-        lsmod |grep nouveau
-  3. 关闭图形界面
-     
-      安装Nvidia驱动程序时，需要停止当前的图形界面。
-     
-      使用快捷键**CTRL+ALT+F2**进入超级终端，**登录账号**，并关闭图形界面：
+### 2. 禁用nouveau
+  nouveau是通过逆向“Nvidia的Linux驱动”创造的一个开源第三方Nvidia显卡驱动程序，因此其效果差，性能低。**在手动安装NVIDIA时需要禁用nouveau驱动。**
 
-（或者有时候使用快捷键失效，可以使用命令`sudo chvt 2`）
-
-```
-      sudo service lightdm stop
-
-    说明：登录账号的时候，数字小键盘可能会默认关闭（即使小键盘灯是亮的)导致输入密码错误，启动下小键盘
-4. 卸载以前的nvidia驱动
+终端执行以下命令修改文件。
+```bash
+sudo vi /etc/modprobe.d/blacklist.conf`
 ```
 
+以下内容复制到文件中
+```conf
+blacklist nouveau   
+blacklist lbm-nouveau   
+options nouveau modeset=0 
+alias nouveau off   
+alias lbm-nouveau off
+```
+补充说明：文件名其实不重要，重要的是文件内容和文件后缀用conf。
+
+### 3. 执行下面命令生效:
+由于nouveau是构建在内核中的，所以要执行下面命令生效
+```bash
+sudo update-initramfs -u
+```
+
+### 4. 重启
+执行以下命令   
+```bash
+reboot
+``` 
+
+重启后查看nouveau有没有运行，没输出代表禁用生效
+```bash
+lsmod |grep nouveau
+```
+
+### 5. 关闭图形界面
+  安装Nvidia驱动程序时，需要停止当前的图形界面。
+  使用快捷键**CTRL+ALT+F2**进入超级终端，**登录账号**，并关闭图形界面：
+（或者有时候使用快捷键失效，可以使用命令`sudo chvt 2`
+```bash
+sudo service lightdm stop
+```
+说明：登录账号的时候，数字小键盘可能会默认关闭（即使小键盘灯是亮的)导致输入密码错误，启动下小键盘
+
+### 4. 卸载以前的nvidia驱动
+```bash
 sudo apt autoremove *nvidia*
-    5. 给驱动文件添加执行权限
+```
+
+### 5. 给驱动文件添加执行权限
+```bash
 sudo chmod +x NVIDIA***.run
-    6. 安装驱动
+```
+
+### 1. 安装驱动
 sudo bash NVIDIA***.run
     7. 检验安装是否成功(有时候需要手动挂载驱动`modprobe nvidia`）
 nvidia-smi
@@ -208,14 +195,14 @@ lspci | grep -i vga
   ## 多卡安装
 
   多显卡安装时，会出现有显卡识别不到的情况，可能的原因有：
-    1. 硬件方面
-        1. 电源功率不够，带不动多显卡
-        2. 显卡连接不当/插错插槽
-        3. 显卡本身损坏
-    2. 软件方面
-        1. bios设置问题
-        2. pcie端口被禁用/显卡被禁用
-        3. 驱动版本不对或驱动安装有问题
+##### 1. 硬件方面
+	1. 电源功率不够，带不动多显卡
+    2. 显卡连接不当/插错插槽
+    3. 显卡本身损坏
+###### 1. 软件方面
+    1. bios设置问题
+    2. pcie端口被禁用/显卡被禁用
+    3. 驱动版本不对或驱动安装有问题
 
 ```
 解决办法：
@@ -240,18 +227,18 @@ reboot
 ```
 
 如果文件中包含"1"，可以将其更改为"0"并重新启动以启用GPU。然而，如果文件夹存在但文件中没有包含值为"1"，则可能有其他因素导致故障。
-    2. 蜜汁操作
-        1. 修改/etc/modprobe.d/blacklist.conf，添加以下内容
+## 1. 蜜汁操作
+#### 1. 修改/etc/modprobe.d/blacklist.conf，添加以下内容
 blacklist nvidiafb
 blacklist nouveau
-        2. 执行命令
+#### 2. 执行命令
 
 ```
-        `sudo depmod -ae`
+`sudo depmod -ae`
 
-        `sudo update-initramfs -u`
+`sudo update-initramfs -u`
 
-        ![](https://secure2.wostatic.cn/static/6b3qt7JrgpsyLgaMjU1VSG/image.png?auth_key=1708398329-vaon3iyRoaMbAnBVdq8E5J-0-c4da6aa70069f068fd6a9a24de2249ee)
+![](https://secure2.wostatic.cn/static/6b3qt7JrgpsyLgaMjU1VSG/image.png?auth_key=1708398329-vaon3iyRoaMbAnBVdq8E5J-0-c4da6aa70069f068fd6a9a24de2249ee)
 ```
 
   https://blog.csdn.net/qq_17783559/article/details/130928219#:~:text=%E5%8F%82%E8%80%83%E5%8D%9A%E5%AE%A2%EF%BC%9A%20(600%E6%9D%A1%E6%B6%88%E6%81%AF)%20ubuntu%2018.04%20%E4%B8%A4%E5%BC%A0GPU%E6%98%BE%E5%8D%A1%EF%BC%8Cnvidia-smi%E5%8F%AA%E6%98%BE%E7%A4%BA%E4%B8%80%E5%BC%A0_nvidia-smi%E5%8F%AA%E6%98%BE%E7%A4%BA%E4%B8%80%E5%BC%A0%E6%98%BE%E5%8D%A1_Jason.su.ai%E7%9A%84%E5%8D%9A%E5%AE%A2-CSDN%E5%8D%9A%E5%AE%A2%201%E3%80%81%E4%BD%BF%E7%94%A8lspci%20%7Cgrep%20NVIDIA%E6%8C%87%E4%BB%A4%E7%9C%8B%E7%9C%8B%E6%98%BE%E5%8D%A1%E7%89%A9%E7%90%86%E8%BF%9E%E6%8E%A5%E6%98%AF%E5%90%A6%E5%87%BA%E7%8E%B0%E9%97%AE%E9%A2%98,%252Fdev%252Fnvidia*%E6%9F%A5%E7%9C%8Bnvidia%E9%A9%B1%E5%8A%A8%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8%20%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B010%E5%9D%97%E6%98%BE%E5%8D%A1%E7%9A%84%E9%A9%B1%E5%8A%A8%E9%83%BD%E6%AD%A3%E5%B8%B8%E3%80%82%203%E3%80%81%E4%BD%BF%E7%94%A8echo%20%22hello%22%20%3E%20%252Fdev%252Fnvidia0%20%E6%9F%A5%E7%9C%8B%E9%80%9A%E4%BF%A1%E6%98%AF%E5%90%A6%E6%AD%A3%E5%B8%B8%20%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E7%AC%AC6%E5%9D%97%E6%98%BE%E5%8D%A1%E8%AF%BB%E5%86%99%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF%EF%BC%8C%E5%87%BA%E7%8E%B0%E8%BF%99%E7%A7%8D%E6%83%85%E5%86%B5%E5%BA%94%E8%AF%A5%E5%B0%B1%E6%98%AF%E8%AF%A5%E5%9D%97%E6%98%BE%E5%8D%A1%E5%9D%8F%E6%8E%89%E4%BA%86%EF%BC%8C%E5%B0%91%E4%B8%80%E5%9D%97%E5%B0%B1%E5%B0%91%E4%B8%80%E5%9D%97%E5%90%A7%E3%80%82

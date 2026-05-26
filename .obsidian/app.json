@@ -15,5 +15,12 @@
   "autoConvertHtml": true,
   "promptDelete": true,
   "vimMode": false,
-  "tabSize": 4
+  "tabSize": 4,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
 }

@@ -4,11 +4,11 @@
   ## 使用官方的推理镜像
   1. 注册[https://ascendhub.huawei.com/](https://ascendhub.huawei.com/)账号并登录，鼠标悬停用户名出现菜单，电机镜像下载凭证，设置镜像下载凭证。下载凭证一次设置只有24小时有效期，超出时间需要重新设置。
      
-      ![](https://secure2.wostatic.cn/static/gGxEZtcC94aK2hC6A6p5Hv/image.png?auth_key=1708398352-5caZAnyisW6QYXVyBQaxeg-0-8fe30b059d0986e5476dbb314bb990ea)
-  2. 在ascendhub上找到推理镜像，infer-modelzoo。查看对应的镜像版本，注意镜像版本与芯片有关。可选择23.0.RC2-mxvision版本。
+      ![|997|521x22](https://secure2.wostatic.cn/static/gGxEZtcC94aK2hC6A6p5Hv/image.png?auth_key=1708398352-5caZAnyisW6QYXVyBQaxeg-0-8fe30b059d0986e5476dbb314bb990ea)
+  1. 在ascendhub上找到推理镜像，infer-modelzoo。查看对应的镜像版本，注意镜像版本与芯片有关。可选择23.0.RC2-mxvision版本。
      
       ![](https://secure2.wostatic.cn/static/qzajsqnH2iu78d8sfhK48/image.png?auth_key=1708398352-ust7r8YgrMbepuN7E6x7tD-0-601f913e046b694eb9862cc81b8f2868)
-  3. 安装23.0.RC2-mxvision镜像对应的cann套件，前往[ascend资源下载页面](https://www.hiascend.com/developer/download/community/result?module=cann&cann=6.3.RC2.alpha005)选择**对应版本的CANN**，下载推理框架(注意架构和芯片的差异)，此处选择红框所示。nnrt是推理框架，nnae是训练框架，toolkit同时包含训练和推理框架；选择aarch架构镜像。
+  2. 安装23.0.RC2-mxvision镜像对应的cann套件，前往[ascend资源下载页面](https://www.hiascend.com/developer/download/community/result?module=cann&cann=6.3.RC2.alpha005)选择**对应版本的CANN**，下载推理框架(注意架构和芯片的差异)，此处选择红框所示。nnrt是推理框架，nnae是训练框架，toolkit同时包含训练和推理框架；选择aarch架构镜像。
      
       ![](https://secure2.wostatic.cn/static/biTMxEjaSvJdC4cTXKhYXb/image.png?auth_key=1708398352-bLvvvvTfVnELUaJfi4Unap-0-e02345b064becae9b062a1679591e73c)
      
