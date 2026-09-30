@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "97a412a4c7639995",
+        "id": "7e15a6313fbb7162",
         "type": "tabs",
         "children": [
           {
-            "id": "de2a9c63b91a50c3",
+            "id": "1b9caab88d326b76",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DevOps/裸金属/5_ipxe指令说明.md",
-                "mode": "preview",
-                "source": false
+                "file": "加速卡/沐曦/X201-驱动安装.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "5_ipxe指令说明"
-            }
-          },
-          {
-            "id": "4dcfcfff417bce9c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DevOps/裸金属/4_iPXE网络启动方案.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "4_iPXE网络启动方案"
+              "title": "X201-驱动安装"
             }
           }
         ]
@@ -55,7 +42,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -67,7 +56,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "CMake 多加速卡后端适配完全指南",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -92,7 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 244.5
+    "width": 417.5
   },
   "right": {
     "id": "21775d249be8f59e",
@@ -108,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DevOps/裸金属/4_iPXE网络启动方案.md",
+                "file": "加速卡/华为/ascend310 推理卡测试.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +107,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "4_iPXE网络启动方案 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
@@ -211,16 +200,16 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 7
       }
     ],
     "direction": "horizontal",
-    "width": 220.5
+    "width": 457.5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "graph:查看关系图谱": false,
       "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
@@ -232,91 +221,53 @@
       "zk-prefixer:创建时间戳笔记": false
     }
   },
-  "floating": {
-    "id": "9fe567643d2fb74b",
-    "type": "floating",
-    "children": [
-      {
-        "id": "c8c8096539016349",
-        "type": "window",
-        "children": [
-          {
-            "id": "1b3a0d42d311c0e4",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "4560350b9d2ab4f4",
-                "type": "leaf",
-                "pinned": true,
-                "state": {
-                  "type": "graph",
-                  "state": {},
-                  "pinned": true,
-                  "icon": "lucide-git-fork",
-                  "title": "关系图谱"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 1480,
-        "y": 746,
-        "width": 1837,
-        "height": 1066,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "4560350b9d2ab4f4",
+  "active": "98e1b8655eeb2ba9",
   "lastOpenFiles": [
-    "DevOps/裸金属/5_ipxe指令说明.md",
-    "未命名.md",
-    "DevOps/裸金属/4_iPXE网络启动方案.md",
-    "DevOps/裸金属/1_BMC (Baseboard Management Controller) 详解.md",
-    "DevOps/裸金属/2_IPMI 详细指南.md",
-    "DevOps/裸金属/BMC远程拉取操作系统.md",
-    "DevOps/裸金属/Redfish启动方式详解.md",
-    "DevOps/裸金属/0_裸金属知识体系.md",
-    "DevOps/裸金属/3_Redfish 详细指南.md",
-    "DevOps/docker/学习笔记/1容器技术原理.md",
-    "DevOps/docker/工作经验/containerd 仓库配置.md",
-    "DevOps/docker/工作经验/dockerdockerfile_1提供的功能.md",
-    "DevOps/docker/工作经验/docker 跨平台构建.md",
-    "DevOps/docker/工作经验/docker 高级构建.md",
-    "加速卡/加速卡.md",
-    "加速卡/BW101-VS-RMV100-VS-X201.md",
-    "加速卡/天数智芯/RM-V100.md",
-    "加速卡/清微电子/清微电子GPU技术调研报告.md",
     "加速卡/沐曦/X201-驱动安装.md",
-    "加速卡/沐曦/X201-测试.md",
+    "加速卡/沐曦/images-x201-驱动安装.zip",
     "加速卡/海光/BW101-驱动安装.md",
+    "加速卡/海光/images_BW100.zip",
+    "AI/模型推理框架横向对比.md",
+    "AI/comfyui/comfyui创建自定义节点.md",
+    "AI/llama-factory/dataset_info配置说明文档.md",
+    "编程语言/go/go包管理常用指令.md",
+    "编程语言/go/总体结构.md",
+    "编程语言/go/gvm安装教程.md",
+    "编程语言/go/doc.jpeg",
+    "编程语言/go/总体结构/有缓冲的channel.png",
+    "编程语言/go/总体结构/粘贴的图像.png",
+    "编程语言/go/总体结构/无缓冲goroutine.png",
+    "编程语言/go/总体结构/channel.png",
+    "编程语言/go/总体结构/image-20269101051309.png",
+    "funsine工作/cube-studio分布式计算节点说明.md",
+    "加速卡/天数智芯/RM-V100.md",
+    "funsine工作/code-server无法打开ipynb文件.md",
+    "funsine工作/桌面可视化结论评估.md",
+    "DevOps/裸金属/4_iPXE网络启动方案.md",
+    "DevOps/裸金属/BMC远程拉取操作系统.md",
+    "DevOps/裸金属/1_BMC (Baseboard Management Controller) 详解.md",
+    "DevOps/裸金属/5_ipxe指令说明.md",
+    "DevOps/裸金属/Redfish启动方式详解.md",
+    "DevOps/裸金属/3_Redfish 详细指南.md",
+    "编程语言/go/总体结构/全局G队列2.png",
+    "编程语言/go/总体结构/image-20268315621700.png",
+    "编程语言/go/总体结构/全局G队列1.png",
+    "编程语言/go/总体结构/image-2026831556268.png",
+    "编程语言/go/附件",
     "加速卡/海光/BW101-测试.md",
-    "加速卡/华为/ascend910B加速卡测试.md",
-    "加速卡/华为/ascend310 推理卡测试.md",
-    "加速卡/英伟达/英伟达gpu共享拆分.md",
-    "编程语言/c++/CMake多加速卡后端适配完全指南.md",
+    "加速卡/BW101-VS-RMV100-VS-X201.md",
+    "!./总体结构/image-20268242937742.png.md",
+    "!./总体结构",
+    "!.",
+    "编程语言/go/未确认 708484.crdownload",
+    "DevOps/slurm/slurm 配置.md",
+    "DevOps/slurm/slurm 节点内存防护配置值记录.md",
+    "DevOps/slurm/slurm 编译笔记(ubuntu).md",
+    "操作系统/linux/linux 中的信号.md",
+    "编程语言/go/总体结构",
     "AI/comfyui/comfyui模型文件夹存放模型的作用.md.bak",
     "AI/comfyui",
-    "加速卡/沐曦/images-x201-驱动安装/开发包安装步骤.png",
-    "加速卡/沐曦/images-x201-驱动安装/沐曦卡驱动安装步骤.png",
     "加速卡/沐曦/images-x201-驱动安装",
-    "加速卡/沐曦/images-x201-测试",
-    "加速卡/英伟达/images_英伟达gpu共享拆分/image-20260326134508386.png",
-    "加速卡/英伟达/images_英伟达gpu共享拆分/image-20260326134446054.png",
-    "加速卡/英伟达/images_英伟达gpu共享拆分/image-20260326115843049.png",
-    "加速卡/英伟达/images_英伟达gpu共享拆分/image-20260326115807206.png",
-    "加速卡/英伟达/images_英伟达gpu共享拆分/image-20260326111742158.png",
-    "加速卡/英伟达/images_英伟达gpu共享拆分/image-20260326111718712.png",
-    "加速卡/英伟达/images_英伟达gpu共享拆分/image-20260326111214602.png",
-    "加速卡/英伟达/images_英伟达gpu共享拆分/image-20260326111157402.png",
-    "加速卡/英伟达/images_英伟达gpu共享拆分",
-    "加速卡/英伟达",
-    "加速卡/清微电子/image_清微电子GPU技术调研报告",
-    "加速卡/海光/images_BW100",
-    "加速卡/天数智芯/images_RM_V100",
-    "加速卡/清微电子",
     "DevOps/slurm/resource_hpc-install/未命名.canvas"
   ]
 }

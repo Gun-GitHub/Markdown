@@ -75,7 +75,7 @@ SrunPortRange = 30001-30005
 
 这张图来源于付伟强:
 
-![8e4f96ca7ed5ffa5df9ae22f72cc3cf7.png](images_slurm-config/299469b038b5e00ad567740b8b3eb780.png)
+![8e4f96ca7ed5ffa5df9ae22f72cc3cf7.png|999](images_slurm-config/299469b038b5e00ad567740b8b3eb780.png)
 
 来自官网:
 

@@ -55,3 +55,23 @@ gvm use go1.15.7
 ```sh
 gvm use go1.16.15 --default
 ```
+6. 常见的 gvm 指令
+```bash
+gvm list              # 已装的 Go 版本
+gvm listall           # 远端所有可装版本
+gvm install go1.22.5  # 从源码编译安装指定版本(首次较慢)
+gvm install go        # 装最新稳定版
+gvm use go1.22.5      # 当前 shell 切到该版本(需先 install)
+gvm use system        # 切回系统 Go
+gvm use go1.22.5 --default   # 设为默认版本
+gvm remove go1.22.5   # 卸载某版本
+gvm alias default go1.22.5   # 设默认(等价于 --default)
+gvm env               # 查看当前 GVM 环境变量
+gvm which             # 当前 go 实际路径
+gvm go_path           # 当前 GOPATH
+gvm go bin            # 当前 GOBIN
+gvm go src            # 当前 GOPATH/src
+gvm go pkg            # 当前 GOMODCACHE
+gvm go doc            # 当前 GOPATH/pkg
+gvm help              # 全部命令
+```
