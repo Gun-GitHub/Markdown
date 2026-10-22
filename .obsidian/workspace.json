@@ -13,13 +13,23 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "加速卡/沐曦/X201-驱动安装.md",
-                "mode": "source",
+                "file": "AI/自然语言模型/2-transformer.md",
+                "mode": "preview",
                 "source": false,
                 "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "X201-驱动安装"
+              "title": "2-transformer"
+            }
+          },
+          {
+            "id": "98e1b8655eeb2ba9",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           }
         ]
@@ -97,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "加速卡/华为/ascend310 推理卡测试.md",
+                "file": "AI/自然语言模型/2-transformer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,28 +193,17 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "DevOps/裸金属/iPXE网络启动方案.md"
+                "file": "加速卡/沐曦/X201-驱动安装.md"
               },
               "icon": "lucide-info",
-              "title": "iPXE网络启动方案的笔记属性"
-            }
-          },
-          {
-            "id": "98e1b8655eeb2ba9",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "title": "笔记属性"
             }
           }
-        ],
-        "currentTab": 7
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 457.5
+    "width": 230.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -221,11 +220,14 @@
       "zk-prefixer:创建时间戳笔记": false
     }
   },
-  "active": "98e1b8655eeb2ba9",
+  "active": "1b9caab88d326b76",
   "lastOpenFiles": [
+    "AI/模型训练/1_多机多卡训练与演变.md",
+    "AI/基础神经网络结构/Neural-Network-Basics.md",
+    "AI/基础神经网络结构/Backpropagation.md",
     "加速卡/沐曦/X201-驱动安装.md",
-    "加速卡/沐曦/images-x201-驱动安装.zip",
     "加速卡/海光/BW101-驱动安装.md",
+    "加速卡/沐曦/images-x201-驱动安装.zip",
     "加速卡/海光/images_BW100.zip",
     "AI/模型推理框架横向对比.md",
     "AI/comfyui/comfyui创建自定义节点.md",
@@ -262,8 +264,6 @@
     "编程语言/go/未确认 708484.crdownload",
     "DevOps/slurm/slurm 配置.md",
     "DevOps/slurm/slurm 节点内存防护配置值记录.md",
-    "DevOps/slurm/slurm 编译笔记(ubuntu).md",
-    "操作系统/linux/linux 中的信号.md",
     "编程语言/go/总体结构",
     "AI/comfyui/comfyui模型文件夹存放模型的作用.md.bak",
     "AI/comfyui",
